@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Home</title>
+</head>
+<body>
+  <nav class="container">
+    <div id="main">
+     <div id="logo_holder" class="show">
+       <a id="logo" href="index.html"><img  src="https://pjsekai.sega.jp/assets/images/shared/logo.png" width="auto" height="80"></a>
+      </div> 
+      <div class="nav">
+     <a href="about.html" id="about">ABOUT</a>
+     <a href="songs.html" id="songs">SONGS</a>
+     <a href="#" id="char">CHARACTERS<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="#707070"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>
+     </a>
+     <a  href="gameplay.html" id="game">GAMEPLAY</a>
+    </div>
+    <div id="ham" class="hidden">
+   <a id="hamburger" class="hidden" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="31" viewBox="0 0 43 31">
+     <g transform="translate(-9612 -2916)">
+       <g transform="translate(9612 2916)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect width="43" height="9" stroke="none"/>
+         <rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+       <g transform="translate(9612 2927)" fill="#fff" stroke="#707070" stroke-width="1"><rect  width="43" height="9" stroke="none"/>
+         <rect x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g><!--onclick="Show()" -->
+       <g transform="translate(9612 2938)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect  width="43" height="9" stroke="none"/><rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+     </g>
+    </svg>
+    </a>
+    </div>
+    <div id="sub_nav_top" onmouseleave="leave()" class="hide">
+     <ul>
+       <li><a id="virtual" href="virtual-singer.html">Virtual Singer</a></li>
+       <li><a id="leo" href="leo-need.html">Leo/need</a></li>
+       <li><a id="more" href="more-more-jump.html">MORE MORE JUMP!</a></li>
+       <li><a id="vivid" href="vivid-bad-squad.html">Vivid BAD SQUAD</a></li>
+       <li><a id="wonderlands" href="wonderlandsxshowtime.html">WonderlandsxShowtime</a></li>
+       <li><a id="night" href="25-ji-night-code-de.html">25-ji, Night Code de.</a></li>
+     </ul> 
+    </div>
+    </div>
+<!--    debug-->
+   <div id="debug" class="hidden">
+<!--    fake varible-->
+     <p id="highlight">home</p>
+   </div>
+    <div id="back" class="hidden">
+    </div>
+    <div id="sub_nav" class="hidden">
+      <ul id="nav-lists">
+        <li class="close">
+          <span  id="close" class="img">x</span></li>
+        <li id="show_back" class="back hidden">
+          <a href="#" id="go_back" class="img "><svg class="left_arrow "  xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="back_arrow" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>BACK</a>
+        </li>
+         <li>
+          <a href="about.html" id="aboutS" class="img">ABOUT</a>
+        </li>
+        <li>
+          <a href="songs.html" id="songS" class="img">SONGS</a>
+        </li>
+        <li>
+          <a href="#" id="charS" class="img">CHARACTERS<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
+        </li>
+        <li class="hidden" id="noo">
+          <a href="more-more-jump.html" id="moremore" class="img">MORE MORE JUMP!</a>
+        </li>
+        <li class="hidden" id="no">
+          <a href="wonderlandsxshowtime.html" id="wond" class="img">WonderlandsxShowtime</a>
+        </li>
+        <li class="bottm">
+          <a href="gameplay.html" id="gameS"  class="img">GAMEPLAY</a>  
+        </li>
+      </ul>
+    </div>    
+</nav>
+</body>
+</html>
