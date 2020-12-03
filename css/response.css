@@ -1,0 +1,88 @@
+@media only screen and (max-width: 650px) {
+  .nav{
+    display: none;
+  }
+  #char_holder{
+    height: 1000px;
+  }
+  .next{
+  display: block;
+}
+/*
+  nav img{
+    height: 50px;
+  }
+*/
+  #hodler li, #hodler ul{
+    margin: 0;
+    padding: 0;
+  }
+  
+/*
+  #hodler{
+    display: table;
+  }
+*/
+  #hodler img{
+    width: 80px;
+  }
+  #cont_img{
+    display: none;
+  }
+  .contents{
+    position: absolute;
+    top: 70%;
+    
+  }
+  .show{
+   display: block; 
+  }
+  #hamburger{
+    display: block;
+  }
+  #ham{
+    display: block;
+  }
+  #sub_nav_top{
+    display: none;
+  }
+/*
+  #back{
+    display: block;
+  }
+  #sub_nav{
+    display: block;
+  }
+*/
+.contents iframe{
+  width: 460px;
+  height: 300px;
+  position: absolute;
+  left: -3%;
+  right: -3%;
+}
+.containT{
+  display: block;
+}
+  .triangle-right{
+    position: relative;
+    top: 250px;
+    right: -30;
+  }
+  .triangle-left{
+    position: relative;
+    top: 250px;
+    left: -30px;
+  }
+  #top{
+    display: none;
+  } 
+  #songs_h{
+   display: none; 
+  }
+  
+  #aside li{
+    margin: 15px;
+  }
+}
+}
