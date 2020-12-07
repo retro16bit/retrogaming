@@ -10,26 +10,28 @@
   <script type="text/javascript" src="js/response.js"></script>
   <link rel="icon" href="images/icon_152_v2.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/typography.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/typography.css">
 
 </head>
 <body onload="my()">
+<!-- navigation-->
+<!-- the hrefs don't have .html is because I wanted to overide www.somethng.com/hi.html default and make into www.somethng.com/hi . That is what is going on with the hrefs, this is not a mistake.-->
   <nav class="container">
     <div id="main">
      <div id="logo_holder" class="show">
        <a id="logo" href="index"><img  src="images/logo.png" width="auto" height="80"></a>
       </div> 
       <div class="nav">
-      <div>
-     <a href="index" id="about.html">ABOUT</a>
-<!--     <a href="songs" id="songs.html">SONGS</a>-->
-     <a href="#" id="char">GAMES<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="white"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="white"/></g></svg>
-     </a>
-     <a  href="gameplay.html" id="game">CONTACT</a>
-     </div>
+        <div id="sec">
+         <a href="index" id="about.html">ABOUT</a>
+    <!--     <a href="songs" id="songs.html">SONGS</a>-->
+         <a href="#" id="games">GAMES<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="white"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="white"/></g></svg>
+         </a>
+         <a  href="gameplay" id="cont">CONTACT</a>
+       </div>
     </div>
     <div id="ham" class="hidden">
    <a id="hamburger" class="hidden" >
@@ -51,12 +53,12 @@
     </div>
     <div id="sub_nav_top" onmouseleave="leave()" class="hide">
      <ul>
-       <li><a id="virtual" href="apple1">Apple1</a></li>
-       <li><a id="leo" href="leo-need.html">Acorn Electron</a></li>
-       <li><a id="more" href="more-more-jump.html">MORE MORE JUMP!</a></li>
-       <li><a id="vivid" href="vivid-bad-squad.html">Vivid BAD SQUAD</a></li>
-       <li><a id="wonderlands" href="wonderlandsxshowtime.html">WonderlandsxShowtime</a></li>
-       <li><a id="night" href="25-ji-night-code-de.html">25-ji, Night Code de.</a></li>
+       <li><a id="apple" href="apple1">Apple1</a></li>
+       <li><a id="aco" href="acorn-electron">Acorn Electron</a></li>
+       <li><a id="amst" href="amstrad-cpc">Amstrad CPC</a></li>
+       <li><a id="atari" href="atari-5200">Atari 5200</a></li>
+       <li><a id="super" href="supergrax">SuperGrax</a></li>
+       <li><a id="virtual" href="virtual-boy">Virtual Boy</a></li>            
      </ul> 
     </div>
     </div>
@@ -78,17 +80,15 @@
           <a href="about" id="aboutS" class="img">ABOUT</a>
         </li>
         <li>
-          <a href="#" id="charS" class="img">CHARACTERS<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
-        </li>
-        <li class="hidden" id="noo">
-          <a href="more-more-jump.html" id="moremore" class="img">MORE MORE JUMP!</a>
-        </li>
-        <li class="hidden" id="no">
-          <a href="wonderlandsxshowtime.html" id="wond" class="img">WonderlandsxShowtime</a>
+          <a href="#" id="gameS" class="img">GAMES<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
         </li>
         <li class="bottm">
-          <a href="gameplay.html" id="gameS"  class="img">GAMEPLAY</a>  
+          <a href="gameplay.html" id="contS"  class="img">CONTACT</a>  
         </li>
+        <li class="hidden" id="ae"><a  href="acorn-electron">Acorn Electron</a></li>             
+       <li class="hidden" id="atarS"><a  href="atari-5200">Atari 5200</a></li>  
+       <li class="hidden" id="virt"><a  href="virtual-boy">Virtual Boy</a></li>  
+       <li class="hidden" id="superS"><a  href="supergrax">SuperGrax</a></li>  
       </ul>
     </div>    
 </nav>
