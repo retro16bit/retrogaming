@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Games</title>
+  <style>
+      #seeMore {
+    display: none;
+  }
+    #no{
+      display: none;
+    }
+    #no:target{
+      display: block;
+    }
+    
+
+  #seeMore:target {
+    display: block;
+  }
+  </style>
+</head>
+<body>
+  <a href='#seeMore'>See more!</a><br>
+  <a href='#no'>See more!</a>
+
+<section id='seeMore'>
+  <p>
+    Here's some more info that you couldn't see before. I can only be seen after you click the "See more!" button.
+  </p>
+
+  <a href='#'>Hide text</a>
+</section><section id='no'>
+  <p>
+    Here's some more info that you couldn't see before. I can only be seen after you click the "See more!" button. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nam unde molestias officia aliquid quas maiores aperiam sapiente, incidunt debitis mollitia cupiditate qui, repellendus eum sunt modi natus alias. Enim.
+  </p>
+
+  <a href='#'>Hide text</a>
+</section>
+</body>
+</html>
