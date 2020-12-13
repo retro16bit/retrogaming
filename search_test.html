@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <form action="" method="POST">
+Enter Search Query: 
+<input type="text" name="search_entered" value='fsdgs'/> <br><br>
+ 
+<input type="submit" name="submit" value="Search"/><br><br>
+</form>
+<?php
+
+$search= $_POST['search_entered'];
+
+$searchoriginal= $search;
+
+$search= strtolower($search);
+
+$search= trim($search);
+
+
+
+$search= explode(" ", $search);
+
+$countsearchterms= count($search);
+
+$submitbutton= $_POST['submit'];
+
+?>
+</body>
+</html>
