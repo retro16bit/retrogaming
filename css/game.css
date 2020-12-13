@@ -1,0 +1,22 @@
+.side{
+  float: left;
+  width: 200px;
+  height: 500px;
+  margin-right: 25px;
+/*  background-color: white;*/
+}
+h1,h3,label{
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+.hiddens, .at_hide, .ams_hide,.app_hide{
+  opacity: 0;
+}
+
+/*
+.imghl{
+  
+}
+.holdls{
+  
+}*/
