@@ -116,10 +116,10 @@ function clickedSomething(event){
   }else if ((event.target.id)==="go_back") {
     document.getElementById("show_back").style.display="none";
     document.getElementById("aboutS").innerHTML ="ABOUT";
-    document.getElementById("aboutS").href = "about.html";
+    document.getElementById("aboutS").href = "about";
     document.getElementById("right_arrow").style.opacity="1";
     document.getElementById("contS").innerHTML ="GAMEPLAY";
-    document.getElementById("contS").href = "gameplay.html";
+    document.getElementById("contS").href = "contact";
     document.getElementById("gameS").classList.remove("hidden");
     document.getElementById("atarS").style.display="none";
     document.getElementById("virt").style.display="none";
