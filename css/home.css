@@ -1,0 +1,35 @@
+/*updated*/
+#popu{
+  margin-top: 100px;
+  display: inline-flex;
+/*  width: 100%;*/
+/*  background-color: aqua;*/
+  padding: 0;
+  margin: auto;
+}
+#popu li{
+  margin-right: 15px;
+}
+#amsI{
+  position: relative;
+  left: -20px;
+  top: -20px;
+}
+#atI{
+  position: relative;
+  left: -20px;
+  top: 0px;
+}
+.holdls{
+  height: 200px;
+  width: 150px;
+/*  background-color: black;*/
+}
+
+.imghl{
+  width: 150px;
+  height: 120px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
