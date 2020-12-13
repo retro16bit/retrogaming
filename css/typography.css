@@ -3,3 +3,9 @@
   color: white;
 }
 /*font-family: 'Monofett', cursive;*/
+#sub_nav_top a{
+  font-size: 13px;
+}
+a{
+  text-decoration: none;
+}
