@@ -85,4 +85,28 @@
     margin: 15px;
   }
 }
+@media only screen and (max-width: 880px) {
+  .nav div{
+    float: right;
+    margin-right: 0;
+  }
+/*
+  .nav  div a{
+    margin-left: 0;
+  }
+*/
+}
+@media only screen and (max-width: 775px) {
+  .nav  div a{
+    margin-left: 0;
+  }
+  #sec{
+    margin-right: 80px;
+  }
+  #sub_nav_top{
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    height: 200px;
+  }
 }
