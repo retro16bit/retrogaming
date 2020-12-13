@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/response.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="js/response.js"></script>
+  <link rel="icon" href="images/icon_152_v2.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/game.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+  
+
+</head>
+<body onload="my();">
+<!-- navigation-->
+<!-- the hrefs don't have .html is because I wanted to overide www.somethng.com/hi.html default and make into www.somethng.com/hi . That is what is going on with the hrefs, this is not a mistake.-->
+  <nav class="container">
+    <div id="main">
+     <div id="logo_holder" class="show">
+       <a id="logo" href="index"><img  src="images/logo.png" width="auto" height="80"></a>
+      </div> 
+      <div class="nav">
+        <div id="sec">
+         <a href="index" id="about">ABOUT</a>
+    <!--     <a href="songs" id="songs.html">SONGS</a>-->
+         <a href="#" id="games">GAMES<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="white"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="white"/></g></svg>
+         </a>
+         <a  href="gameplay" id="cont">CONTACT</a>
+       </div>
+    </div>
+    <div id="ham" class="hidden">
+   <a id="hamburger" class="hidden" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="31" viewBox="0 0 43 31">
+     <g transform="translate(-9612 -2916)">
+       <g transform="translate(9612 2916)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect width="43" height="9" stroke="none"/>
+         <rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+       <g transform="translate(9612 2927)" fill="#fff" stroke="#707070" stroke-width="1"><rect  width="43" height="9" stroke="none"/>
+         <rect x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g><!--onclick="Show()" -->
+       <g transform="translate(9612 2938)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect  width="43" height="9" stroke="none"/><rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+     </g>
+    </svg>
+    </a>
+    </div>
+    <div id="sub_nav_top" onmouseleave="leave()" class="hide">
+     <ul>
+       <li><a id="apple"  href="apple1">Apple1</a></li>
+       <li><a id="aco" href="acorn-electron">Acorn Electron</a></li>
+       <li><a id="amst" href="amstrad-cpc">Amstrad CPC</a></li>
+       <li><a id="atari" href="atari-5200">Atari 5200</a></li>
+       <li><a id="super" href="supergrax">SuperGrax</a></li>
+       <li><a id="virtual" href="virtual-boy">Virtual Boy</a></li>            
+     </ul> 
+    </div>
+    </div>
+<!--    debug-->
+   <div id="debug" class="hidden">
+<!--    fake varible-->
+     <p id="highlight">game</p>
+     <p id="what_ga" class="hiddens">atari</p>
+   </div>
+    <div id="back" class="hidden">
+    </div>
+    <div id="sub_nav" class="hidden">
+      <ul id="nav-lists">
+        <li class="close">
+          <span  id="close" class="img">x</span></li>
+        <li id="show_back" class="back hidden">
+          <a href="#" id="go_back" class="img "><svg class="left_arrow "  xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="back_arrow" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>BACK</a>
+        </li>
+         <li>
+          <a href="about" id="aboutS" class="img">ABOUT</a>
+        </li>
+        <li>
+          <a href="#" id="gameS" class="img">GAMES<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
+        </li>
+        <li class="bottm">
+          <a href="gameplay.html" id="contS"  class="img">CONTACT</a>  
+        </li>
+        <li class="hidden" id="ae"><a  href="acorn-electron">Acorn Electron</a></li>             
+       <li class="hidden" id="atarS"><a  href="atari-5200">Atari 5200</a></li>  
+       <li class="hidden" id="virt"><a  href="virtual-boy">Virtual Boy</a></li>  
+       <li class="hidden" id="superS"><a  href="supergrax">SuperGrax</a></li>  
+      </ul>
+    </div>    
+</nav>
+ <!-- test section -->
+<!--
+<div  style="background-color: red;height: 50px">
+</div>
+-->
+ <div class="side">
+   <h1>Year</h1>
+   <form id="date">
+     <input type="checkbox" class="at_hide" id="date1" name="date1" value="1982">
+     <label for="date1" class="at_hide">1982</label><br>
+     <input type="checkbox" class="at_hide" id="date2" name="date2" value="1983">
+     <label for="date2" class="at_hide">1983</label><br>
+     <input type="checkbox" class="at_hide" id="date3" name="date3" value="1984">
+     <label for="date3" class="at_hide">1984</label><br>
+     <input type="checkbox" class="at_hide ams_hide" id="date4" name="date4" value="1985">
+     <label for="date4" class="at_hide ams_hide">1985</label><br>
+     <input type="checkbox" class="at_hide ams_hide" id="date5" name="date5" value="1986">
+     <label for="date5" class="at_hide ams_hide">1986</label><br>
+     <input type="checkbox" class="at_hide" id="date6" name="date6" value="2002">
+     <label for="date6" class="at_hide">2002</label><br>
+     <input type="checkbox" class="at_hide" id="date7" name="date7" value="2004">
+     <label for="date7" class="at_hide">2004</label><br>
+     <input type="checkbox" class="at_hide" id="date7" name="date7" value="2005">
+     <label for="date7" class="at_hide">2005</label><br>
+     <input type="checkbox" class="at_hide" id="date7" name="date7" value="2007">
+     <label for="date7" class="at_hide">2007</label><br>
+     <input type="checkbox" class="app_hide" id="date8" name="date8" value="1976">
+     <label for="date8" class="app_hide">1976</label><br>
+     <input type="checkbox" class="ams_hide" id="date9" name="date9" value="1987">
+     <label for="date9" class="ams_hide">1987</label><br>
+     <input type="checkbox" class="ams_hide" id="date10" name="date10" value="1988">
+     <label for="date10" class="ams_hide">1988</label><br>
+     <input type="checkbox" class="ams_hide" id="date10" name="date10" value="1988">
+     <label for="date10" class="ams_hide">1988</label><br>
+     <input type="checkbox" class="ams_hide" id="date11" name="date11" value="1989">
+     <label for="date11" class="ams_hide">1989</label><br>
+     <input type="checkbox" class="ams_hide" id="date12" name="date12" value="1990">
+     <label for="date12" class="ams_hide">1990</label><br>
+     <input type="checkbox" class="ams_hide" id="date13" name="date13" value="1991">
+     <label for="date13" class="ams_hide">1991</label><br>
+     <hr>
+   </form>
+   <h1>Genre</h1>
+   <form id="genre">
+     <input type="checkbox" id="genre1" class="at_hide ams_hide" name="genre1" value="shooter">
+     <label for="genre1" class="at_hide ams_hide">Shooter</label><br>
+     
+     <input type="checkbox" class="at_hide ams_hide" id="genre2" name="genre2" value="action">
+     <label for="genre1" class="at_hide ams_hide">Action</label><br>
+      
+     <input type="checkbox" class="at_hide ams_hide" id="genre3" name="genre3" value="arcade">
+     <label for="genre3" class="at_hide ams_hide">Arcade</label><br>
+     
+     <input type="checkbox" class="at_hide ams_hide" id="genre4" name="genre4" value="simulation">
+     <label for="genre4" class="at_hide ams_hide">Simulation</label><br>
+     
+     <input type="checkbox" class="at_hide" id="genre5" name="genre5" value="strategy/tactics">
+     <label for="genre5" class="at_hide">Strategy/tactics</label><br>
+     
+     <input type="checkbox" class="at_hide" id="genre6" name="genre6" value="Sports">
+     <label for="genre6" class="at_hide">Sports</label><br>
+     
+     <input type="checkbox" class="at_hide" id="genre7" name="genre7" value="puzzle">
+     <label for="genre7" class="at_hide">Puzzle</label><br>
+     
+     
+     <input type="checkbox" class="ams_hide" id="genre8" name="genre8" value="fighter">
+     <label for="genre8" class="ams_hide">Fighter</label><br>
+     
+     <input type="checkbox" class="ams_hide" id="genre9" name="genre9" value="adventure">
+     <label for="genre9" class="ams_hide">Adventure</label><br>
+     
+     <input type="checkbox" class="ams_hide" id="genre10" name="genre10" value="bowling">
+     <label for="genre10" class="ams_hide">Bowling</label><br>
+     
+     <input type="checkbox" class="ams_hide" id="genre11" name="genre11" value="racing/driving">
+     <label for="genre11" class="ams_hide">Racing/Driving</label><br>
+     
+     <input type="checkbox" class="ams_hide" id="genre11" name="genre11" value="racing/driving">
+     <label for="genre11" class="ams_hide">Racing/Driving</label><br>
+     
+     <input type="checkbox" class="ams_hide" id="genre11" name="genre11" value="roleplaying">
+     <label for="genre11" class="ams_hide">Role-playing (RPG)</label><br>
+
+     <hr>
+   </form>
+ </div>
+<div id="wrap-all">
+ <div>
+   <ul>
+    <li>
+     <a href="apple1.html">
+      <div class="holdls">
+      <div class="imghl">
+        <img id="atI" src="images/atari-5200/defender.jpg" width="190">
+      </div>       
+       <h3>Defender</h3>
+     </div>
+     </a>
+    </li>
+    
+
+   </ul>
+ </div>
+
+</div>
+<script>
+//  var parent=document.getElementById("genre");
+  var atar = document.getElementsByClassName("at_hide"),
+      amstrad = document.getElementsByClassName("ams_hide"),
+      apple = document.getElementsByClassName("app_hide");
+//  var i=0;
+//  Function atar(){
+      if (document.getElementById("what_ga").innerHTML === "atari"){ 
+        console.log(atar.length);
+        var i;
+        for (i = 0; i < atar.length; i++) {
+          atar[i].style.opacity="1";
+        }
+      }
+    else if(document.getElementById("what_ga").innerHTML === "amstrad"){ 
+        console.log(atar.length);
+        var l;
+        for (l = 0; l < amstrad.length; l++) {
+          amstrad[l].style.opacity="1";
+        }
+      }
+    else if(document.getElementById("what_ga").innerHTML === "apple"){ 
+        console.log(atar.length);
+        var a;
+        for (a = 0; a < apple.length; a++) {
+          apple[a].style.opacity="1";
+        }
+      }
+//}
+        
+//    document.getElementsByClassName("at_hide").style.display="block";
+  </script>
+</body>
+</html>
