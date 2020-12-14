@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--needs to be updated-->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
@@ -16,6 +17,7 @@
   <link rel="stylesheet" href="css/typography.css">
   <link rel="stylesheet" href="css/game.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script type="text/javascript" src="js/game.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
   
 
@@ -70,7 +72,7 @@
    <div id="debug" class="hidden">
 <!--    fake varible-->
      <p id="highlight">game</p>
-     <p id="what_ga" class="hiddens">atari</p>
+     
    </div>
     <div id="back" class="hidden">
     </div>
@@ -97,103 +99,168 @@
       </ul>
     </div>    
 </nav>
+
  <!-- test section -->
-<!--
-<div  style="background-color: red;height: 50px">
-</div>
--->
+ <p id="what_ga" class="hidden">atari</p>
+ <!-- atari year-->
+<!-- 82 a-->
+ <h3 id="year" class="hidden">false</h3>
+<!-- 83 c-->
+ <h3 id="year1" class="hidden">false</h3>
+<!-- 84 e-->
+ <h3 id="year2" class="hidden">false</h3>
+<!-- 85 f-->
+ <h3 id="year3" class="hidden">false</h3>
+<!-- 86 h-->
+ <h3 id="year4" class="hidden">false</h3>
+<!-- 2002 j-->
+ <h3 id="year5" class="hidden">false</h3>
+<!-- 2004 k-->
+ <h3 id="year6" class="hidden">false</h3>
+<!-- 2005 l-->
+ <h3 id="year7" class="hidden">false</h3>
+<!-- 2007 m-->
+ <h3 id="year8" class="hidden">false</h3>
+<!-- 87 n-->
+ <h3 id="year9" class="hidden">false</h3>
+ <!-- 87 o-->
+ <h3 id="year10" class="hidden">false</h3>
+ <!-- 89 p-->
+ <h3 id="year10" class="hidden">false</h3>
+  <!-- 90 q-->
+ <h3 id="year11" class="hidden">false</h3>  
+ <!-- 91 r-->
+ <h3 id="year12" class="hidden">false</h3>
+
+
+
+<!--search section side-->
  <div class="side">
    <h1>Year</h1>
-   <form id="date">
-     <input type="checkbox" class="at_hide" id="date1" name="date1" value="1982">
-     <label for="date1" class="at_hide">1982</label><br>
-     <input type="checkbox" class="at_hide" id="date2" name="date2" value="1983">
-     <label for="date2" class="at_hide">1983</label><br>
-     <input type="checkbox" class="at_hide" id="date3" name="date3" value="1984">
+   <form>
+    <div class="at_hide">
+      <input type="checkbox" onclick="eighty_two()"  id="date1" name="date1" value="1982">
+     <label for="date1"  >1982</label><br>
+    </div>
+     
+     <div class="at_hide">
+       <input type="checkbox" onclick="eighty_three()" id="date2" name="date2" value="1983">
+       <label for="date2" >1983</label><br>
+     </div>
+     
+     <input type="checkbox" onclick="eighty_four()" class="at_hide" id="date3" name="date3" value="1984">
      <label for="date3" class="at_hide">1984</label><br>
-     <input type="checkbox" class="at_hide ams_hide" id="date4" name="date4" value="1985">
+     <input type="checkbox" onclick="eighty_five()" class="at_hide ams_hide" id="date4" name="date4" value="1985">
      <label for="date4" class="at_hide ams_hide">1985</label><br>
-     <input type="checkbox" class="at_hide ams_hide" id="date5" name="date5" value="1986">
+     <input type="checkbox" onclick="eighty_six()" class="at_hide ams_hide" id="date5" name="date5" value="1986">
      <label for="date5" class="at_hide ams_hide">1986</label><br>
-     <input type="checkbox" class="at_hide" id="date6" name="date6" value="2002">
+     <input type="checkbox" onclick="two()" class="at_hide" id="date6" name="date6" value="2002">
      <label for="date6" class="at_hide">2002</label><br>
-     <input type="checkbox" class="at_hide" id="date7" name="date7" value="2004">
+     <input type="checkbox" onclick="two_four()" class="at_hide" id="date7" name="date7" value="2004">
      <label for="date7" class="at_hide">2004</label><br>
-     <input type="checkbox" class="at_hide" id="date7" name="date7" value="2005">
+     <input type="checkbox" onclick="two_five()" class="at_hide" id="date7" name="date7" value="2005">
      <label for="date7" class="at_hide">2005</label><br>
-     <input type="checkbox" class="at_hide" id="date7" name="date7" value="2007">
+     <input type="checkbox" onclick="sub()" class="at_hide" id="date7" name="date7" value="2007">
      <label for="date7" class="at_hide">2007</label><br>
-     <input type="checkbox" class="app_hide" id="date8" name="date8" value="1976">
+     
+     <input type="checkbox" onclick="sub()" class="app_hide" id="date8" name="date8" value="1976">
      <label for="date8" class="app_hide">1976</label><br>
-     <input type="checkbox" class="ams_hide" id="date9" name="date9" value="1987">
+     <input type="checkbox" onclick="sub()" class="ams_hide" id="date9" name="date9" value="1987">
      <label for="date9" class="ams_hide">1987</label><br>
-     <input type="checkbox" class="ams_hide" id="date10" name="date10" value="1988">
+     <input type="checkbox" onclick="sub()" class="ams_hide" id="date10" name="date10" value="1988">
      <label for="date10" class="ams_hide">1988</label><br>
-     <input type="checkbox" class="ams_hide" id="date10" name="date10" value="1988">
+     <input type="checkbox" onclick="sub()" class="ams_hide" id="date10" name="date10" value="1988">
      <label for="date10" class="ams_hide">1988</label><br>
-     <input type="checkbox" class="ams_hide" id="date11" name="date11" value="1989">
+     <input type="checkbox" onclick="sub()" class="ams_hide" id="date11" name="date11" value="1989">
      <label for="date11" class="ams_hide">1989</label><br>
-     <input type="checkbox" class="ams_hide" id="date12" name="date12" value="1990">
+     <input type="checkbox" onclick="sub()" class="ams_hide" id="date12" name="date12" value="1990">
      <label for="date12" class="ams_hide">1990</label><br>
-     <input type="checkbox" class="ams_hide" id="date13" name="date13" value="1991">
+     <input type="checkbox" onclick="sub()" class="ams_hide" id="date13" name="date13" value="1991">
      <label for="date13" class="ams_hide">1991</label><br>
      <hr>
-   </form>
+   
    <h1>Genre</h1>
-   <form id="genre">
-     <input type="checkbox" id="genre1" class="at_hide ams_hide" name="genre1" value="shooter">
+   
+     <input type="checkbox" onclick="shoot()" id="genre1" class="at_hide ams_hide" name="genre1" value="shooter">
      <label for="genre1" class="at_hide ams_hide">Shooter</label><br>
      
-     <input type="checkbox" class="at_hide ams_hide" id="genre2" name="genre2" value="action">
+     <input type="checkbox" onclick="gen()" class="at_hide ams_hide" id="genre2" name="genre2" value="action">
      <label for="genre1" class="at_hide ams_hide">Action</label><br>
       
-     <input type="checkbox" class="at_hide ams_hide" id="genre3" name="genre3" value="arcade">
+     <input type="checkbox" onclick="gen()" class="at_hide ams_hide" id="genre3" name="genre3" value="arcade">
      <label for="genre3" class="at_hide ams_hide">Arcade</label><br>
      
-     <input type="checkbox" class="at_hide ams_hide" id="genre4" name="genre4" value="simulation">
+     <input type="checkbox" onclick="gen()" class="at_hide ams_hide" id="genre4" name="genre4" value="simulation">
      <label for="genre4" class="at_hide ams_hide">Simulation</label><br>
      
-     <input type="checkbox" class="at_hide" id="genre5" name="genre5" value="strategy/tactics">
+     <input type="checkbox" onclick="gen()" class="at_hide" id="genre5" name="genre5" value="strategy/tactics">
      <label for="genre5" class="at_hide">Strategy/tactics</label><br>
      
-     <input type="checkbox" class="at_hide" id="genre6" name="genre6" value="Sports">
+     <input type="checkbox" onclick="gen()" class="at_hide" id="genre6" name="genre6" value="Sports">
      <label for="genre6" class="at_hide">Sports</label><br>
      
-     <input type="checkbox" class="at_hide" id="genre7" name="genre7" value="puzzle">
+     <input type="checkbox" onclick="gen()" class="at_hide" id="genre7" name="genre7" value="puzzle">
      <label for="genre7" class="at_hide">Puzzle</label><br>
      
      
-     <input type="checkbox" class="ams_hide" id="genre8" name="genre8" value="fighter">
+     <input type="checkbox" onclick="gen()" class="ams_hide" id="genre8" name="genre8" value="fighter">
      <label for="genre8" class="ams_hide">Fighter</label><br>
      
-     <input type="checkbox" class="ams_hide" id="genre9" name="genre9" value="adventure">
+     <input type="checkbox" onclick="gen()" class="ams_hide" id="genre9" name="genre9" value="adventure">
      <label for="genre9" class="ams_hide">Adventure</label><br>
      
-     <input type="checkbox" class="ams_hide" id="genre10" name="genre10" value="bowling">
+     <input type="checkbox" onclick="gen()" class="ams_hide" id="genre10" name="genre10" value="bowling">
      <label for="genre10" class="ams_hide">Bowling</label><br>
+    
      
-     <input type="checkbox" class="ams_hide" id="genre11" name="genre11" value="racing/driving">
+     <input type="checkbox" onclick="gen()" class="ams_hide" id="genre11" name="genre11" value="racing/driving">
      <label for="genre11" class="ams_hide">Racing/Driving</label><br>
      
-     <input type="checkbox" class="ams_hide" id="genre11" name="genre11" value="racing/driving">
-     <label for="genre11" class="ams_hide">Racing/Driving</label><br>
-     
-     <input type="checkbox" class="ams_hide" id="genre11" name="genre11" value="roleplaying">
-     <label for="genre11" class="ams_hide">Role-playing (RPG)</label><br>
-
-     <hr>
+     <input type="checkbox" onclick="gen()" class="ams_hide" id="genre12" name="genre12" value="roleplaying">
+     <label for="genre12" class="ams_hide">Role-playing (RPG)</label><br><br>
+<!--     <input  type="submit" value="submit" id="submit" onclick="return sub();">-->
    </form>
  </div>
 <div id="wrap-all">
  <div>
-   <ul>
-    <li>
-     <a href="apple1.html">
+   <ul id="list">
+    <li class="eighty_two">
+     <a href="defender">
       <div class="holdls">
       <div class="imghl">
         <img id="atI" src="images/atari-5200/defender.jpg" width="190">
       </div>       
        <h3>Defender</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_three">
+     <a href="">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/starwars-thearcedegame.jpg" width="190">
+      </div>       
+       <h3>Star Wars: The Arcade Game</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_three">
+     <a href="">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/Star-Wars-ROTJ-Death-Star-Battle.jpg" width="190">
+      </div>       
+       <h3>Star Wars: The Return of the Jedi - Death Star Battle</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_three">
+     <a href="">
+      <div class="holdls">
+      <div class="imghl">
+        <img id="atI" src="images/atari-5200/starwars-thearcedegame.jpg" width="190">
+      </div>       
+       <h3>Star Wars: The Arcade Game</h3>
      </div>
      </a>
     </li>
@@ -204,36 +271,32 @@
 
 </div>
 <script>
-//  var parent=document.getElementById("genre");
   var atar = document.getElementsByClassName("at_hide"),
       amstrad = document.getElementsByClassName("ams_hide"),
       apple = document.getElementsByClassName("app_hide");
-//  var i=0;
-//  Function atar(){
       if (document.getElementById("what_ga").innerHTML === "atari"){ 
-        console.log(atar.length);
+        
         var i;
         for (i = 0; i < atar.length; i++) {
           atar[i].style.opacity="1";
+          console.log(atar.length);
         }
       }
     else if(document.getElementById("what_ga").innerHTML === "amstrad"){ 
-        console.log(atar.length);
+        console.log(amstrad.length);
         var l;
         for (l = 0; l < amstrad.length; l++) {
           amstrad[l].style.opacity="1";
         }
       }
     else if(document.getElementById("what_ga").innerHTML === "apple"){ 
-        console.log(atar.length);
+        console.log(apple.length);
         var a;
         for (a = 0; a < apple.length; a++) {
           apple[a].style.opacity="1";
         }
       }
-//}
-        
-//    document.getElementsByClassName("at_hide").style.display="block";
+  
   </script>
 </body>
 </html>
