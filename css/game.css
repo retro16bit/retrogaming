@@ -9,14 +9,25 @@ h1,h3,label{
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
 }
-.hiddens, .at_hide, .ams_hide,.app_hide{
-  opacity: 0;
+.at_hide,.ams_hide .app_hide{
+  display: none;
 }
-
-/*
-.imghl{
-  
+#submit{
+  color: black;
 }
-.holdls{
-  
-}*/
+#submit:hover{
+  color: red;
+}
+#list{
+  float:left;
+  width: 80%;
+  height: 500px;
+  background-color: red;
+  display: flex;
+}
+.eighty_two,.eighty_three{
+  margin-right: 15px;
+  width: 190px;
+  flex-wrap: wrap;
+  display: none;
+}
