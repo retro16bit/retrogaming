@@ -1,0 +1,25 @@
+/*update*/
+#contH{
+  display: flex;
+  align-items: center;
+}
+#hids{
+   margin-bottom: 300px;
+}
+#atI{
+  margin-right: 15px;
+}
+#id{
+  margin-right: 30px;
+  display: flex;
+}
+h1{text-align: center;font-size: 24px;}
+.bond{
+  width: 300px;
+  flex-wrap: wrap;
+}
+#section{
+  width: 250px;
+  margin: 0;
+  flex-wrap:wrap;
+}
