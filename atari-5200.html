@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="body">
 <!--needs to be updated-->
 <head>
   <meta charset="UTF-8">
@@ -19,10 +19,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <script type="text/javascript" src="js/game.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
-  
+<!--
+  <style>
+    footer{
+      bottom: -900px;
+    }
+    @media only screen and (max-width: 650px) {footer{bottom: -18850px;}.side{display: none;}}
+    @media only screen and (max-width: 980px) {footer{bottom: -2300px;}.side{display: none;}}
+  </style>
+-->
 
 </head>
-<body onload="my();">
+<body onload="my();" >
 <!-- navigation-->
 <!-- the hrefs don't have .html is because I wanted to overide www.somethng.com/hi.html default and make into www.somethng.com/hi . That is what is going on with the hrefs, this is not a mistake.-->
   <nav class="container">
@@ -33,8 +41,8 @@
       <div class="nav">
         <div id="sec">
          <a href="index" id="about">ABOUT</a>
-    <!--     <a href="songs" id="songs">SONGS</a>-->
-         <a href="#" id="game">GAMES<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="white"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="white"/></g></svg>
+    <!--     <a href="songs" id="songs.html">SONGS</a>-->
+         <a href="" id="games">GAMES<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="white"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="white"/></g></svg>
          </a>
          <a  href="contact" id="cont">CONTACT</a>
        </div>
@@ -59,7 +67,7 @@
     </div>
     <div id="sub_nav_top" onmouseleave="leave()" class="hide">
      <ul>
-       <li><a id="apple" href="apple1">Apple1</a></li>
+       <li><a id="apple"  href="apple1">Apple1</a></li>
        <li><a id="aco" href="acorn-electron">Acorn Electron</a></li>
        <li><a id="amst" href="amstrad-cpc">Amstrad CPC</a></li>
        <li><a id="atari" href="atari-5200">Atari 5200</a></li>
@@ -72,6 +80,7 @@
    <div id="debug" class="hidden">
 <!--    fake varible-->
      <p id="highlight">game</p>
+     
    </div>
     <div id="back" class="hidden">
     </div>
@@ -89,7 +98,7 @@
           <a href="#" id="gameS" class="img">GAMES<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
         </li>
         <li class="bottm">
-          <a href="contact" id="contS"  class="img">CONTACT</a>  
+          <a href="gameplay.html" id="contS"  class="img">CONTACT</a>  
         </li>
         <li class="hidden" id="ae"><a  href="acorn-electron">Acorn Electron</a></li>             
        <li class="hidden" id="atarS"><a  href="atari-5200">Atari 5200</a></li>  
@@ -101,6 +110,9 @@
 
  <!-- test section -->
  <p id="what_ga" class="hidden">atari</p>
+<!-- <p id="what_ga" class="hidden">amstrad</p>-->
+<!-- <p id="what_ga" class="hidden">apple</p>-->
+ 
  <!-- atari year-->
 <!-- 82 a-->
  <h3 id="year" class="hidden">false</h3>
@@ -108,9 +120,9 @@
  <h3 id="year1" class="hidden">false</h3>
 <!-- 84 e-->
  <h3 id="year2" class="hidden">false</h3>
-<!-- 85 f-->
+<!-- 85 f amstrad atari-->
  <h3 id="year3" class="hidden">false</h3>
-<!-- 86 h-->
+<!-- 86 h amstrad atari-->
  <h3 id="year4" class="hidden">false</h3>
 <!-- 2002 j-->
  <h3 id="year5" class="hidden">false</h3>
@@ -120,16 +132,23 @@
  <h3 id="year7" class="hidden">false</h3>
 <!-- 2007 m-->
  <h3 id="year8" class="hidden">false</h3>
+ 
+<!-- amstrad-->
 <!-- 87 n-->
  <h3 id="year9" class="hidden">false</h3>
- <!-- 87 o-->
+ <!-- 88 o-->
  <h3 id="year10" class="hidden">false</h3>
  <!-- 89 p-->
- <h3 id="year10" class="hidden">false</h3>
+ <h3 id="year11" class="hidden">false</h3>
   <!-- 90 q-->
- <h3 id="year11" class="hidden">false</h3>  
+ <h3 id="year12" class="hidden">false</h3>  
  <!-- 91 r-->
- <h3 id="year12" class="hidden">false</h3>
+ <h3 id="year13" class="hidden">false</h3>
+<!-- apple-->
+ 
+<!-- apple-->
+<!-- 76 w-->
+ <h3 id="year14" class="hidden">false</h3>
 
 
 
@@ -146,129 +165,428 @@
        <input type="checkbox" onclick="eighty_three()" id="date2" name="date2" value="1983">
        <label for="date2" >1983</label><br>
      </div>
+     <div class="at_hide">
+       <input type="checkbox" onclick="eighty_four()"  id="date3" name="date3" value="1984">
+       <label for="date3" >1984</label><br>  
+     </div>
+
+     <div class="at_hide ams_hide">
+       <input type="checkbox" onclick="eighty_five()"  id="date4" name="date4" value="1985">
+       <label for="date4" >1985</label><br>  
+     </div>
+     <div class="at_hide ams_hide">
+       <input type="checkbox" onclick="eighty_six()"  id="date5" name="date5" value="1986">
+     <label for="date5" >1986</label><br>  
+     </div>
+     <div class="at_hide">
+       <input type="checkbox" onclick="two_two()"  id="date6" name="date6" value="2002">
+       <label for="date6" >2002</label><br>       
+     </div>
+     <div  class="at_hide">
+       <input type="checkbox" onclick="two_four()"  id="date7" name="date7" value="2004">
+     <label for="date7">2004</label><br>
+     </div>
+     <div class="at_hide">
+       <input type="checkbox" onclick="two_five()"  id="date7" name="date7" value="2005">
+     <label for="date7" >2005</label><br>  
+     </div>
+     <div class="at_hide">
+       <input type="checkbox" onclick="two_seven()"  id="date7" name="date7" value="2007">
+     <label for="date7" >2007</label><br>  
+     </div>
+     <div class="app_hide">
+       <input type="checkbox" onclick="seventy_six()"  id="date8" name="date8" value="1976">
+     <label for="date8">1976</label><br>  
+     </div>     
+     <div class="ams_hide">
+       <input type="checkbox" onclick="eighty_seven()"  id="date9" name="date9" value="1987">
+     <label for="date9" >1987</label><br>
+     </div>
+     <div class="ams_hide">
+       <input type="checkbox" onclick="eighty_eight()"  id="date10" name="date10" value="1988">
+     <label for="date10" >1988</label><br>  
+     </div>
+     <div class="ams_hide">
+       <input type="checkbox" onclick="eighty_nine()"  id="date11" name="date11" value="1989">
+     <label for="date11" >1989</label><br>  
+     </div>
+     <div class="ams_hide">
+       <input type="checkbox" onclick="nighty()"  id="date12" name="date12" value="1990">
+     <label for="date12" >1990</label><br>  
+     </div>
+     <div class="ams_hide">
+       <input type="checkbox" onclick="nighty_one()"  id="date13" name="date13" value="1991">
+       <label for="date13" >1991</label><br>  
+     </div>
      
-     <input type="checkbox" onclick="eighty_four()" class="at_hide" id="date3" name="date3" value="1984">
-     <label for="date3" class="at_hide">1984</label><br>
-     <input type="checkbox" onclick="eighty_five()" class="at_hide ams_hide" id="date4" name="date4" value="1985">
-     <label for="date4" class="at_hide ams_hide">1985</label><br>
-     <input type="checkbox" onclick="eighty_six()" class="at_hide ams_hide" id="date5" name="date5" value="1986">
-     <label for="date5" class="at_hide ams_hide">1986</label><br>
-     <input type="checkbox" onclick="two()" class="at_hide" id="date6" name="date6" value="2002">
-     <label for="date6" class="at_hide">2002</label><br>
-     <input type="checkbox" onclick="two_four()" class="at_hide" id="date7" name="date7" value="2004">
-     <label for="date7" class="at_hide">2004</label><br>
-     <input type="checkbox" onclick="two_five()" class="at_hide" id="date7" name="date7" value="2005">
-     <label for="date7" class="at_hide">2005</label><br>
-     <input type="checkbox" onclick="sub()" class="at_hide" id="date7" name="date7" value="2007">
-     <label for="date7" class="at_hide">2007</label><br>
-     
-     <input type="checkbox" onclick="sub()" class="app_hide" id="date8" name="date8" value="1976">
-     <label for="date8" class="app_hide">1976</label><br>
-     <input type="checkbox" onclick="sub()" class="ams_hide" id="date9" name="date9" value="1987">
-     <label for="date9" class="ams_hide">1987</label><br>
-     <input type="checkbox" onclick="sub()" class="ams_hide" id="date10" name="date10" value="1988">
-     <label for="date10" class="ams_hide">1988</label><br>
-     <input type="checkbox" onclick="sub()" class="ams_hide" id="date10" name="date10" value="1988">
-     <label for="date10" class="ams_hide">1988</label><br>
-     <input type="checkbox" onclick="sub()" class="ams_hide" id="date11" name="date11" value="1989">
-     <label for="date11" class="ams_hide">1989</label><br>
-     <input type="checkbox" onclick="sub()" class="ams_hide" id="date12" name="date12" value="1990">
-     <label for="date12" class="ams_hide">1990</label><br>
-     <input type="checkbox" onclick="sub()" class="ams_hide" id="date13" name="date13" value="1991">
-     <label for="date13" class="ams_hide">1991</label><br>
      <hr>
    
-   <h1>Genre</h1>
+     <h1>Genre</h1>
    
-     <input type="checkbox" onclick="shoot()" id="genre1" class="at_hide ams_hide" name="genre1" value="shooter">
-     <label for="genre1" class="at_hide ams_hide">Shooter</label><br>
+   <div class="at_hide ams_hide">
+     <input type="checkbox" onclick="shoot()" id="genre1"  name="genre1" value="shooter">
+     <label for="genre1" >Shooter</label><br>
+   </div>
+     <div class="at_hide ams_hide">
+     <input type="checkbox" onclick="action()"  id="genre2" name="genre2" value="action">
+     <label for="genre1" >Action</label><br>  
+     </div>     
+     <div class="at_hide ams_hide">
+     <input type="checkbox" onclick="arcade()"  id="genre3" name="genre3" value="arcade">
+     <label for="genre3" >Arcade</label><br>  
+     </div>
+      <div class="at_hide ams_hide app_hide">
+        <input type="checkbox" onclick="sim()"  id="genre4" name="genre4" value="simulation">
+     <label for="genre4" >Simulation</label><br>
+      </div>     
+     <div class="at_hide app_hide">
+       <input type="checkbox" onclick="strag()"  id="genre5" name="genre5" value="strategy/tactics">
+     <label for="genre5" >Strategy/tactics</label><br>
+     </div>
+     <div class="at_hide">
+       <input type="checkbox" onclick="sports()"  id="genre6" name="genre6" value="Sports">
+     <label for="genre6" >Sports</label><br> 
+     </div>
+     <div class="at_hide">
+       <input type="checkbox" onclick="puz()"  id="genre7" name="genre7" value="puzzle">
+     <label for="genre7" >Puzzle</label><br>
+     </div>   
+     <div class="ams_hide">
+       <input type="checkbox" onclick="fighter()"  id="genre8" name="genre8" value="fighter">
+     <label for="genre8" >Fighter</label><br>       
+     </div>
+     <div class="ams_hide">
+       <input type="checkbox" onclick="adven()" id="genre9" name="genre9" value="adventure">
+       <label for="genre9" >Adventure</label><br>       
+     </div>
+     <div class="ams_hide">
+     <input type="checkbox" onclick="bowl()" id="genre10" name="genre10" value="bowling">
+     <label for="genre10" >Bowling</label><br>           
+     </div>
+     <div class="ams_hide">
+       <input type="checkbox" onclick="rac()"  id="genre11" name="genre11" value="racing/driving">
+     <label for="genre11" >Racing/Driving</label><br>       
+     </div>
+     <div class="ams_hide">
+       <input type="checkbox" onclick="rpg()"  id="genre12" name="genre12" value="roleplaying">
+     <label for="genre12" >Role-playing (RPG)</label><br><br>  
+     </div>
      
-     <input type="checkbox" onclick="gen()" class="at_hide ams_hide" id="genre2" name="genre2" value="action">
-     <label for="genre1" class="at_hide ams_hide">Action</label><br>
-      
-     <input type="checkbox" onclick="gen()" class="at_hide ams_hide" id="genre3" name="genre3" value="arcade">
-     <label for="genre3" class="at_hide ams_hide">Arcade</label><br>
-     
-     <input type="checkbox" onclick="gen()" class="at_hide ams_hide" id="genre4" name="genre4" value="simulation">
-     <label for="genre4" class="at_hide ams_hide">Simulation</label><br>
-     
-     <input type="checkbox" onclick="gen()" class="at_hide" id="genre5" name="genre5" value="strategy/tactics">
-     <label for="genre5" class="at_hide">Strategy/tactics</label><br>
-     
-     <input type="checkbox" onclick="gen()" class="at_hide" id="genre6" name="genre6" value="Sports">
-     <label for="genre6" class="at_hide">Sports</label><br>
-     
-     <input type="checkbox" onclick="gen()" class="at_hide" id="genre7" name="genre7" value="puzzle">
-     <label for="genre7" class="at_hide">Puzzle</label><br>
-     
-     
-     <input type="checkbox" onclick="gen()" class="ams_hide" id="genre8" name="genre8" value="fighter">
-     <label for="genre8" class="ams_hide">Fighter</label><br>
-     
-     <input type="checkbox" onclick="gen()" class="ams_hide" id="genre9" name="genre9" value="adventure">
-     <label for="genre9" class="ams_hide">Adventure</label><br>
-     
-     <input type="checkbox" onclick="gen()" class="ams_hide" id="genre10" name="genre10" value="bowling">
-     <label for="genre10" class="ams_hide">Bowling</label><br>
-    
-     
-     <input type="checkbox" onclick="gen()" class="ams_hide" id="genre11" name="genre11" value="racing/driving">
-     <label for="genre11" class="ams_hide">Racing/Driving</label><br>
-     
-     <input type="checkbox" onclick="gen()" class="ams_hide" id="genre12" name="genre12" value="roleplaying">
-     <label for="genre12" class="ams_hide">Role-playing (RPG)</label><br><br>
 <!--     <input  type="submit" value="submit" id="submit" onclick="return sub();">-->
    </form>
  </div>
 <div id="wrap-all">
  <div>
    <ul id="list">
-    <li class="eighty_two">
+    <li class="eighty_two shooter action">
      <a href="defender">
       <div class="holdls">
       <div class="imghl">
         <img id="atI" src="images/atari-5200/defender.jpg" width="190">
       </div>       
        <h3>Defender</h3>
+       <h3>1982</h3>
      </div>
      </a>
     </li>
-    <li class="eighty_three">
-     <a href="">
+    <li class="eighty_three shooter action">
+     <a href="star_wars_the_arcade_game">
       <div class="holdls">
       <div class="imghl">
         <img  src="images/atari-5200/starwars-thearcedegame.jpg" width="190">
       </div>       
        <h3>Star Wars: The Arcade Game</h3>
+       <h3>1983</h3>
      </div>
      </a>
     </li>
-    <li class="eighty_three">
-     <a href="">
+    <li class="eighty_three shooter action">
+     <a href="star_wars_the_return_of_the_jedi_death_star_battle">
       <div class="holdls">
       <div class="imghl">
         <img  src="images/atari-5200/Star-Wars-ROTJ-Death-Star-Battle.jpg" width="190">
       </div>       
        <h3>Star Wars: The Return of the Jedi - Death Star Battle</h3>
+       <h3>1983</h3>
      </div>
      </a>
     </li>
-    <li class="eighty_three">
-     <a href="">
+    <li class="eighty_two arcade">
+     <a href="pac-man">
       <div class="holdls">
       <div class="imghl">
-        <img id="atI" src="images/atari-5200/starwars-thearcedegame.jpg" width="190">
+        <img  src="images/atari-5200/Pac-Man.jpg" width="190">
       </div>       
-       <h3>Star Wars: The Arcade Game</h3>
+       <h3>Pac-Man</h3>
+       <h3>1982</h3>
      </div>
      </a>
     </li>
-    
+    <li class="eighty_two action sim strag space sci shooter">
+     <a href="star_raiders">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/star-raiders.jpg" width="190">
+      </div>       
+       <h3>Star Raiders</h3>
+       <h3>1982</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_three shooter action arcade">
+     <a href="star_trek_operations_simulator">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/star-trek.jpg" width="190">
+      </div>       
+       <h3>Star Trek: Strategic Operations Simulator</h3>
+       <h3>1983</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_four sports">
+     <a href="the_activism_decathlon">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/decathlon.jpg" width="190">
+      </div>       
+       <h3>The Activism Decathlon</h3>
+       <h3>1984</h3>
+     </div>
+     </a>
+    </li>
+    <li class="two_seven action">
+     <a href="adventure_ii">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/adventure_II.jpg" width="190">
+      </div>       
+       <h3>Adventure II</h3>
+       <h3>2007</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_three action shooter arcade">
+     <a href="astro_chase">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/astro-chase.jpg" width="190">
+      </div>       
+       <h3>Astro Chase</h3>
+       <h3>1983</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_six action sports">
+     <a href="ballblazer">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/ballblazer.jpg" width="190">
+      </div>       
+       <h3>Ballblazer</h3>
+       <h3>1986</h3>
+     </div>
+     </a>
+    </li>    
+    <li class="eighty_four action arcade shooter">
+     <a href="beamrider">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/beamrider.png" width="190">
+      </div>       
+       <h3>Beamrider</h3>
+       <h3>1984</h3>
+     </div>
+     </a>
+    </li>
+    <li class="two_four action arcade">
+     <a href="beef_drop">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/beaf-drop.jpg" width="190">
+      </div>       
+       <h3>Beef Drop</h3>
+       <h3>2004</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_four action shooter arcade">
+     <a href="berzerk">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/berzerk.jpg" width="190">
+      </div>       
+       <h3>Berzerk</h3>
+       <h3>1984</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_three  action arcade">
+     <a href="blueprint">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/blueprint.jpg" width="190">
+      </div>       
+       <h3>Blueprint</h3>
+       <h3>1983</h3>
+     </div>
+     </a>
+    </li>
+    <li class="two_five action arcade puzzle ">
+     <a href="boulder-dash_ii_rockfords_revenge">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/Boulder-Dash%20II-Rockfords-revenge.jpg" width="190">
+      </div>       
+       <h3>Boulder Dash II: Rockfords’ revenge</h3>
+       <h3>2005</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_five action arcade ">
+     <a href="bounty_bob_strikes_back">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/Bounty_bob_strikes_back.jpg" width="190">
+      </div>       
+       <h3>
+Bounty Bob Strikes Back!</h3>
+       <h3>1985</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_three action shooter arcade ">
+     <a href="buck_rogers_planet_of_zoom">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/buck-rogers-planet-of-zoom.jpg" width="190">
+      </div>       
+       <h3>Buck Rogers: Planet of Zoom
+</h3>
+       <h3>1983</h3>
+     </div>
+     </a>
+    </li>
+    <li class="two_two action arcade shooter ">
+     <a href="castle_blast">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/castle-blast.jpg" width="190">
+      </div>       
+       <h3>Castle Blast
+</h3>
+       <h3>2002</h3>
+     </div>
+     </a>
+    </li>
+    <li class="two_four action arcade ">
+     <a href="castle_crisis">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/CastleCrisis.jpg" width="190">
+      </div>       
+       <h3>Castle Crisis</h3>
+       <h3>2004</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_three action arcade shooter">
+     <a href="centipede">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/centipede.jpg" width="190">
+      </div>       
+       <h3>Centipede</h3>
+       <h3>1983</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_four action arcade shooter">
+     <a href="choplifter">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/choplifter.jpg" width="190">
+      </div>       
+       <h3>Choplifter</h3>
+       <h3>1984</h3>
+     </div>
+     </a>
+    </li><li class="eighty_three action arcade">
+     <a href="dig_dug">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/dig-dug.jpg" width="190">
+      </div>       
+       <h3>Dig Dug</h3>
+       <h3>1983</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_three action arcade">
+     <a href="frogger">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/frogger.jpg" width="190">
+      </div>       
+       <h3>
+Frogger</h3>
+       <h3>1983</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_two action shooter arcade">
+     <a href="galaxian">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/galaxian.jpg" width="190">
+      </div>       
+       <h3>Galaxian</h3>
+       <h3>1982</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_four action arcade platform">
+     <a href="hero">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/Hero.jpg" width="190">
+      </div>       
+       <h3>
+H.E.R.O.</h3>
+       <h3>1984</h3>
+     </div>
+     </a>
+    </li><li class="eighty_four action arcade platform">
+     <a href="mario_bros">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/mario-bors.jpg" width="190">
+      </div>       
+       <h3>Mari Bros.</h3>
+       <h3>1984</h3>
+     </div>
+     </a>
+    </li>
+    <li class="eighty_three action arcade shooter">
+     <a href="megamania">
+      <div class="holdls">
+      <div class="imghl">
+        <img  src="images/atari-5200/megamania.jpg" width="190">
+      </div>       
+       <h3>
+Megamania</h3>
+       <h3>1983</h3>
+     </div>
+     </a>
+    </li>
 
    </ul>
  </div>
 
 </div>
+<footer id="foot">
+  Hie
+</footer>
 <script>
   var atar = document.getElementsByClassName("at_hide"),
       amstrad = document.getElementsByClassName("ams_hide"),
@@ -277,7 +595,7 @@
         
         var i;
         for (i = 0; i < atar.length; i++) {
-          atar[i].style.opacity="1";
+          atar[i].style.display="block";
           console.log(atar.length);
         }
       }
@@ -285,17 +603,22 @@
         console.log(amstrad.length);
         var l;
         for (l = 0; l < amstrad.length; l++) {
-          amstrad[l].style.opacity="1";
+          amstrad[l].style.display="block";
         }
       }
     else if(document.getElementById("what_ga").innerHTML === "apple"){ 
         console.log(apple.length);
         var a;
         for (a = 0; a < apple.length; a++) {
-          apple[a].style.opacity="1";
+          apple[a].style.display="block";
         }
       }
-  
+  var footer = document.getElementById("foot");
+//     var a =  height.scrollHeight;
+         //screen.height+screen.availHeight;
+  console.log(window.outerHeight+window.innerHeight+"px");
+  console.log(screen.availHeight+"px");
+  footer.style.top=window.outerHeight+window.innerHeight+"px";
   </script>
 </body>
 </html>
