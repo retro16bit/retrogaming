@@ -1,3 +1,4 @@
+/*Updated*/
 *{
   font-family: 'Press Start 2P', cursive;
   color: white;
@@ -8,4 +9,7 @@
 }
 a{
   text-decoration: none;
+}
+#id,h1,h3,p{
+  font-family: 'Roboto', sans-serif;
 }
