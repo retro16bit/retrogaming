@@ -1,3 +1,4 @@
+/*needs to be updated*/
 .side{
   float: left;
   width: 200px;
@@ -9,7 +10,7 @@ h1,h3,label{
   font-weight: bold;
   font-family: 'Roboto', sans-serif;
 }
-.at_hide,.ams_hide .app_hide{
+.at_hide,.ams_hide, .app_hide{
   display: none;
 }
 #submit{
@@ -21,13 +22,49 @@ h1,h3,label{
 #list{
   float:left;
   width: 80%;
-  height: 500px;
-  background-color: red;
+/*  height: 500px;*/
+/*  background-color: red;*/
   display: flex;
+  flex-wrap: wrap;
 }
-.eighty_two,.eighty_three{
+#list li{
   margin-right: 15px;
+  margin-bottom: 10px;
+}
+#list li:hover{
+  background-color: rgba(255,255,255,0.5);
+  border: 1px red dashed;
+}
+#cus{
+  width: 190px;
+  overflow-x: hidden;
+}
+.eighty_two,.eighty_three,.eighty_four,.eighty_five, .eighty_six, .eighty_seven, .eighty_eight, .eighty_nine, .two_seven,.two_four,.two_five,.two_two, .nighty,.nighty_one,.seventy_six {
+/*  margin-right: 15px;*/
   width: 190px;
   flex-wrap: wrap;
-  display: none;
+/*  display: none;*/
 }
+
+/*
+.action, 
+.sports,
+.shooter,
+arcade,
+.sim,
+.strag,
+.space,
+.sci,
+.fighting,
+.adven .
+.bowl
+.rac
+.rpg
+*/
+/*
+.imghl{
+  
+}
+.holdls{
+  
+}*/
