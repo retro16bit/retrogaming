@@ -1,3 +1,4 @@
+/*Updated*/
 @media only screen and (max-width: 650px) {
   .nav{
     display: none;
@@ -8,6 +9,7 @@
   .next{
   display: block;
 }
+  
 /*
   nav img{
     height: 50px;
@@ -33,6 +35,9 @@
     position: absolute;
     top: 70%;
     
+  }
+  #title{
+    margin-bottom: 25px;
   }
   .show{
    display: block; 
@@ -74,6 +79,21 @@
     top: 250px;
     left: -30px;
   }
+  #contH{
+/*    display: none;*/
+    opacity: 0;
+    position: absolute;
+    top: 90px;
+    left: 0;
+    margin: 0;
+  }
+  #hids{
+    display: block;
+    width: 200px;
+  }
+  #hids img{
+    width: 200px;
+  }
   #top{
     display: none;
   } 
@@ -84,6 +104,13 @@
   #aside li{
     margin: 15px;
   }
+  #wrap-all{
+    padding: 0px;
+  }
+  #id{
+   margin-right: 0px;
+  }
+  
 }
 @media only screen and (max-width: 880px) {
   .nav div{
@@ -106,7 +133,8 @@
   #sub_nav_top{
     position: absolute;
     top: 50px;
-    right: 100px;
+    left: 450px;
     height: 200px;
   }
 }
+
