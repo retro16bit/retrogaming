@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/response.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <script type="text/javascript" src="js/response.js"></script>
+  <link rel="icon" href="images/icon_152_v2.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/info.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body onload="my();">
+  <nav class="container">
+    <div id="main">
+     <div id="logo_holder" class="show">
+       <a id="logo" href="index"><img  src="images/logo.png" width="auto" height="80"></a>
+      </div> 
+      <div class="nav">
+        <div id="sec">
+         <a href="index" id="about">ABOUT</a>
+    <!--     <a href="songs" id="songs.html">SONGS</a>-->
+         <a href="#" id="games">GAMES<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="white"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="white"/></g></svg>
+         </a>
+         <a  href="gameplay" id="cont">CONTACT</a>
+       </div>
+    </div>
+    <div id="ham" class="hidden">
+   <a id="hamburger" class="hidden" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="31" viewBox="0 0 43 31">
+     <g transform="translate(-9612 -2916)">
+       <g transform="translate(9612 2916)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect width="43" height="9" stroke="none"/>
+         <rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+       <g transform="translate(9612 2927)" fill="#fff" stroke="#707070" stroke-width="1"><rect  width="43" height="9" stroke="none"/>
+         <rect x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g><!--onclick="Show()" -->
+       <g transform="translate(9612 2938)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect  width="43" height="9" stroke="none"/><rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+     </g>
+    </svg>
+    </a>
+    </div>
+    <div id="sub_nav_top" onmouseleave="leave()" class="hide">
+     <ul>
+       <li><a id="apple"  href="apple1">Apple1</a></li>
+       <li><a id="aco" href="acorn-electron">Acorn Electron</a></li>
+       <li><a id="amst" href="amstrad-cpc">Amstrad CPC</a></li>
+       <li><a id="atari" href="atari-5200">Atari 5200</a></li>
+       <li><a id="super" href="supergrax">SuperGrax</a></li>
+       <li><a id="virtual" href="virtual-boy">Virtual Boy</a></li>            
+     </ul> 
+    </div>
+    </div>
+<!--    debug-->
+   <div id="debug" class="hidden">
+<!--    fake varible-->
+     <p id="highlight">game</p>
+     <p id="what_ga" class="hiddens">atari</p>
+   </div>
+    <div id="back" class="hidden">
+    </div>
+    <div id="sub_nav" class="hidden">
+      <ul id="nav-lists">
+        <li class="close">
+          <span  id="close" class="img">x</span></li>
+        <li id="show_back" class="back hidden">
+          <a href="#" id="go_back" class="img "><svg class="left_arrow "  xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="back_arrow" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>BACK</a>
+        </li>
+         <li>
+          <a href="about" id="aboutS" class="img">ABOUT</a>
+        </li>
+        <li>
+          <a href="#" id="gameS" class="img">GAMES<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
+        </li>
+        <li class="bottm">
+          <a href="gameplay.html" id="contS"  class="img">CONTACT</a>  
+        </li>
+        <li class="hidden" id="ae"><a  href="acorn-electron">Acorn Electron</a></li>             
+       <li class="hidden" id="atarS"><a  href="atari-5200">Atari 5200</a></li>  
+       <li class="hidden" id="virt"><a  href="virtual-boy">Virtual Boy</a></li>  
+       <li class="hidden" id="superS"><a  href="supergrax">SuperGrax</a></li>  
+      </ul>
+    </div>    
+</nav>
+ 
+  <div id="wrap-all">
+ <div>
+  <div class="holdls">
+    
+     <div class="hidden" id="hids">
+      <div>
+         <img  src="images/amstrad-cpc/Archon.png">
+         <h1 id="title">Archon: the Light and the Dark</h1>
+       </div>
+        
+        <div >
+        <div id="section">
+         <h3>Electronic Arts, Inc.</h3>
+         <h3>1985</h3>
+         <h3>Action, strategy / tactics</h3><br>
+          <p >Archon: The Light and the Dark is a strategic board game with some similarities to chess. Two sides, a light one and a dark one, consisting of 18 pieces each compete on a board divided into (9 by 9) squares. You win the game by having one of your units on each of the five powerpoint squares, by removing all opposing pieces from the board or by imprisoning the last remaining creature of the opposing side.<br>
+
+However, you can't just remove a piece from the board by landing on it. When two pieces clash, the outcome is decided in the battle arena during one-on-one real-time combat. If the real-time combat takes place on a dark square, the dark monster gets a health bonus (longer life bar). On a light square the light side gains an advantage. There are also some squares whose color changes over time (from afternoon, to dusk, to night, to dawn etc.), which adds an extra layer of strategy to the game.<br><br>
+
+Unlike chess the two sides are not identical. Both sides consist of mythological creatures. For example the light side has among others unicorns, valkyries and a djinni while the dark side features basilisks, banshees and manticores. The differences are not just cosmetic. Two special pieces are the light wizard & the dark sorceress, they can both cast magical spells like: imprison a unit on the board, shift the flow of time (change day/night cycle to your advantage), bring one unit back from the dead etc.<br><br>
+
+The different pieces have their own movement restrictions regarding the number of squares they're allowed to travel on the board and whether or not they can jump over other units (like the knight in chess). Units also behave different in combat; some units are faster than others, some use melee attacks while others fire projectiles.<br><br>
+
+Archon can be played with either one or two players. The NES version, which was released a few years after the other versions, has improved graphics for the real-time combat part. Each type of square has it's own colored background and the unit sprites are larger.</p>
+       </div>
+        </div>
+  
+       
+      </div> 
+      <div id="contH">
+      
+       <div>
+         <img id="atI" src="images/amstrad-cpc/Archon.png">
+         <h1>Archon: the Light and the Dark</h1>
+       </div>
+        
+        <div id="id">
+        <div>
+         <h3>Electronic Arts, Inc.</h3>
+         <h3>1985</h3>
+         <h3>Action, strategy / tactics</h3><br>
+          <p>Archon: The Light and the Dark is a strategic board game with some similarities to chess. Two sides, a light one and a dark one, consisting of 18 pieces each compete on a board divided into (9 by 9) squares. You win the game by having one of your units on each of the five powerpoint squares, by removing all opposing pieces from the board or by imprisoning the last remaining creature of the opposing side.<br>
+
+However, you can't just remove a piece from the board by landing on it. When two pieces clash, the outcome is decided in the battle arena during one-on-one real-time combat. If the real-time combat takes place on a dark square, the dark monster gets a health bonus (longer life bar). On a light square the light side gains an advantage. There are also some squares whose color changes over time (from afternoon, to dusk, to night, to dawn etc.), which adds an extra layer of strategy to the game.<br>
+
+Unlike chess the two sides are not identical. Both sides consist of mythological creatures. For example the light side has among others unicorns, valkyries and a djinni while the dark side features basilisks, banshees and manticores. The differences are not just cosmetic. Two special pieces are the light wizard & the dark sorceress, they can both cast magical spells like: imprison a unit on the board, shift the flow of time (change day/night cycle to your advantage), bring one unit back from the dead etc.<br>
+
+The different pieces have their own movement restrictions regarding the number of squares they're allowed to travel on the board and whether or not they can jump over other units (like the knight in chess). Units also behave different in combat; some units are faster than others, some use melee attacks while others fire projectiles.<br>
+
+Archon can be played with either one or two players. The NES version, which was released a few years after the other versions, has improved graphics for the real-time combat part. Each type of square has it's own colored background and the unit sprites are larger.</p>
+       </div>
+        </div>
+       
+      </div> 
+            
+       
+     </div>
+ </div>
+
+</div>
+<footer>
+  blah blah
+</footer>
+</body>
+</html>

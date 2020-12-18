@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/response.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <script type="text/javascript" src="js/response.js"></script>
+  <link rel="icon" href="images/icon_152_v2.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/info.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<!--
+<style>
+  .yes{
+  list-style:disc;
+    display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+  .yes, .ls{
+    list-style:disc;
+  }
+  </style>
+-->
+</head>
+<body onload="my();">
+  <nav class="container">
+    <div id="main">
+     <div id="logo_holder" class="show">
+       <a id="logo" href="index"><img  src="images/logo.png" width="auto" height="80"></a>
+      </div> 
+      <div class="nav">
+        <div id="sec">
+         <a href="index" id="about">ABOUT</a>
+    <!--     <a href="songs" id="songs.html">SONGS</a>-->
+         <a href="#" id="games">GAMES<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="white"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="white"/></g></svg>
+         </a>
+         <a  href="gameplay" id="cont">CONTACT</a>
+       </div>
+    </div>
+    <div id="ham" class="hidden">
+   <a id="hamburger" class="hidden" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="31" viewBox="0 0 43 31">
+     <g transform="translate(-9612 -2916)">
+       <g transform="translate(9612 2916)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect width="43" height="9" stroke="none"/>
+         <rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+       <g transform="translate(9612 2927)" fill="#fff" stroke="#707070" stroke-width="1"><rect  width="43" height="9" stroke="none"/>
+         <rect x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g><!--onclick="Show()" -->
+       <g transform="translate(9612 2938)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect  width="43" height="9" stroke="none"/><rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+     </g>
+    </svg>
+    </a>
+    </div>
+    <div id="sub_nav_top" onmouseleave="leave()" class="hide">
+     <ul>
+       <li><a id="apple"  href="apple1">Apple1</a></li>
+       <li><a id="aco" href="acorn-electron">Acorn Electron</a></li>
+       <li><a id="amst" href="amstrad-cpc">Amstrad CPC</a></li>
+       <li><a id="atari" href="atari-5200">Atari 5200</a></li>
+       <li><a id="super" href="supergrax">SuperGrax</a></li>
+       <li><a id="virtual" href="virtual-boy">Virtual Boy</a></li>            
+     </ul> 
+    </div>
+    </div>
+<!--    debug-->
+   <div id="debug" class="hidden">
+<!--    fake varible-->
+     <p id="highlight">game</p>
+     <p id="what_ga" class="hiddens">atari</p>
+   </div>
+    <div id="back" class="hidden">
+    </div>
+    <div id="sub_nav" class="hidden">
+      <ul id="nav-lists">
+        <li class="close">
+          <span  id="close" class="img">x</span></li>
+        <li id="show_back" class="back hidden">
+          <a href="#" id="go_back" class="img "><svg class="left_arrow "  xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="back_arrow" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>BACK</a>
+        </li>
+         <li>
+          <a href="about" id="aboutS" class="img">ABOUT</a>
+        </li>
+        <li>
+          <a href="#" id="gameS" class="img">GAMES<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
+        </li>
+        <li class="bottm">
+          <a href="gameplay.html" id="contS"  class="img">CONTACT</a>  
+        </li>
+        <li class="hidden" id="ae"><a  href="acorn-electron">Acorn Electron</a></li>             
+       <li class="hidden" id="atarS"><a  href="atari-5200">Atari 5200</a></li>  
+       <li class="hidden" id="virt"><a  href="virtual-boy">Virtual Boy</a></li>  
+       <li class="hidden" id="superS"><a  href="supergrax">SuperGrax</a></li>  
+      </ul>
+    </div>    
+</nav>
+ 
+  <div id="wrap-all">
+ <div>
+  <div class="holdls">
+    
+     <div class="hidden" id="hids">
+      <div>
+         <img  src="images/atari-5200/buck-rogers-planet-of-zoom.jpg">
+         <h1 id="title">Buck Rogers: Planet of Zoom</h1>
+       </div>
+        
+        <div >
+        <div>
+         <h3>SEGA Enterprises, Inc.</h3>
+         <h3>1983</h3>
+         <h3>SEGA Enterprises, Inc.
+Action, shooter, arcade</h3><br>
+          <p>Buck Rogers: Planet of Zoom is a single player science fiction themed obstacle race, where the player controls Buck Rogers' space ship and must guide it through multiple pairs of pylons throughout the game. Controlling the ship involves side scrolling to the left or right, stop, moving forward (and faster), and moving backwards/break (and slower). Additionally, the spaceship can also fire its weapon to unleash a pair of energy bolts.<br>
+The player starts in sector 1.0 and will finish this level after the player successfully goes between an allocated number of pylons, indicated at the top left side of the screen; the first requirement is 9 pylons and will gradually increase with each new sector. In sector 1.1., with the addition of having to complete the pylon requirement, a group of flying saucers, ranging from 1 to 4 (per group), fly in a pattern. The player must avoid these flying saucers by maneuvering out of their way or by shooting them down. In sector 1.3., a new type of robot spaceship (at least one) will fly erratically and attempt to crash into the player's space ship (due to the marvel of technology of that era, enemy ships that disappear from one side of the screen, will emerge on the other side of the screen). Later sectors will gradually introduce more difficult challenges.<br>
+The game ends when the player loses all three lives by crashing into (or being crashed by, it seems sometimes) pylons or enemy space ships. Although there is no penalty in avoiding pylons altogether, the game will also end if the allocated amount of time (indicated by a long bar at the top center screen) runs out. The player may increase speed to move faster, which will present maneuverability challenges in itself. The overall score increases by distance traveled, pylons traveled through, and enemy spaceships shot down. The latest score and the high score are saved and shown in the main menu.</p>
+       </div>
+        </div>
+  
+       
+      </div> 
+      <div id="contH">
+      
+       <div>
+         <img id="atI" src="images/atari-5200/buck-rogers-planet-of-zoom.jpg" width="300px">
+         <h1>Buck Rogers: Planet of Zoom</h1>
+       </div>
+        
+        <div id="id">
+        <div>
+         <h3>SEGA Enterprises, Inc.</h3>
+         <h3>1983</h3>
+         <h3>SEGA Enterprises, Inc.
+Action, shooter, arcade</h3><br>
+          <p>Buck Rogers: Planet of Zoom is a single player science fiction themed obstacle race, where the player controls Buck Rogers' space ship and must guide it through multiple pairs of pylons throughout the game. Controlling the ship involves side scrolling to the left or right, stop, moving forward (and faster), and moving backwards/break (and slower). Additionally, the spaceship can also fire its weapon to unleash a pair of energy bolts.<br>
+The player starts in sector 1.0 and will finish this level after the player successfully goes between an allocated number of pylons, indicated at the top left side of the screen; the first requirement is 9 pylons and will gradually increase with each new sector. In sector 1.1., with the addition of having to complete the pylon requirement, a group of flying saucers, ranging from 1 to 4 (per group), fly in a pattern. The player must avoid these flying saucers by maneuvering out of their way or by shooting them down. In sector 1.3., a new type of robot spaceship (at least one) will fly erratically and attempt to crash into the player's space ship (due to the marvel of technology of that era, enemy ships that disappear from one side of the screen, will emerge on the other side of the screen). Later sectors will gradually introduce more difficult challenges.<br>
+The game ends when the player loses all three lives by crashing into (or being crashed by, it seems sometimes) pylons or enemy space ships. Although there is no penalty in avoiding pylons altogether, the game will also end if the allocated amount of time (indicated by a long bar at the top center screen) runs out. The player may increase speed to move faster, which will present maneuverability challenges in itself. The overall score increases by distance traveled, pylons traveled through, and enemy spaceships shot down. The latest score and the high score are saved and shown in the main menu.</p>
+       </div>
+        </div>
+       
+      </div> 
+            
+       
+     </div>
+ </div>
+
+</div>
+<footer id="foot">
+  blah blah
+</footer>
+<script>
+  var footer = document.getElementById("foot"),
+      a="400";
+
+  console.log(window.outerHeight+window.innerHeight+"px");
+  console.log("height:"+window.innerHeight+"px");
+  console.log(screen.availHeight+"px");
+  console.log("width:"+window.innerWidth+"px");
+  if (window.innerWidth<=500){
+    console.log("yes");
+    footer.style.top=window.outerHeight+window.innerHeight+"px";
+  }
+  else{
+    footer.style.top=window.innerHeight+"px";
+  }
+  
+  </script>
+</body>
+</html>

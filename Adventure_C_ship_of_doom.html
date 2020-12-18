@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/response.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <script type="text/javascript" src="js/response.js"></script>
+  <link rel="icon" href="images/icon_152_v2.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/info.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+</head>
+<body onload="my();">
+  <nav class="container">
+    <div id="main">
+     <div id="logo_holder" class="show">
+       <a id="logo" href="index"><img  src="images/logo.png" width="auto" height="80"></a>
+      </div> 
+      <div class="nav">
+        <div id="sec">
+         <a href="index" id="about">ABOUT</a>
+    <!--     <a href="songs" id="songs.html">SONGS</a>-->
+         <a href="#" id="games">GAMES<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="white"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="white"/></g></svg>
+         </a>
+         <a  href="gameplay" id="cont">CONTACT</a>
+       </div>
+    </div>
+    <div id="ham" class="hidden">
+   <a id="hamburger" class="hidden" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="31" viewBox="0 0 43 31">
+     <g transform="translate(-9612 -2916)">
+       <g transform="translate(9612 2916)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect width="43" height="9" stroke="none"/>
+         <rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+       <g transform="translate(9612 2927)" fill="#fff" stroke="#707070" stroke-width="1"><rect  width="43" height="9" stroke="none"/>
+         <rect x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g><!--onclick="Show()" -->
+       <g transform="translate(9612 2938)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect  width="43" height="9" stroke="none"/><rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+     </g>
+    </svg>
+    </a>
+    </div>
+    <div id="sub_nav_top" onmouseleave="leave()" class="hide">
+     <ul>
+       <li><a id="apple"  href="apple1">Apple1</a></li>
+       <li><a id="aco" href="acorn-electron">Acorn Electron</a></li>
+       <li><a id="amst" href="amstrad-cpc">Amstrad CPC</a></li>
+       <li><a id="atari" href="atari-5200">Atari 5200</a></li>
+       <li><a id="super" href="supergrax">SuperGrax</a></li>
+       <li><a id="virtual" href="virtual-boy">Virtual Boy</a></li>            
+     </ul> 
+    </div>
+    </div>
+<!--    debug-->
+   <div id="debug" class="hidden">
+<!--    fake varible-->
+     <p id="highlight">game</p>
+     <p id="what_ga" class="hiddens">atari</p>
+   </div>
+    <div id="back" class="hidden">
+    </div>
+    <div id="sub_nav" class="hidden">
+      <ul id="nav-lists">
+        <li class="close">
+          <span  id="close" class="img">x</span></li>
+        <li id="show_back" class="back hidden">
+          <a href="#" id="go_back" class="img "><svg class="left_arrow "  xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="back_arrow" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>BACK</a>
+        </li>
+         <li>
+          <a href="about" id="aboutS" class="img">ABOUT</a>
+        </li>
+        <li>
+          <a href="#" id="gameS" class="img">GAMES<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
+        </li>
+        <li class="bottm">
+          <a href="gameplay.html" id="contS"  class="img">CONTACT</a>  
+        </li>
+        <li class="hidden" id="ae"><a  href="acorn-electron">Acorn Electron</a></li>             
+       <li class="hidden" id="atarS"><a  href="atari-5200">Atari 5200</a></li>  
+       <li class="hidden" id="virt"><a  href="virtual-boy">Virtual Boy</a></li>  
+       <li class="hidden" id="superS"><a  href="supergrax">SuperGrax</a></li>  
+      </ul>
+    </div>    
+</nav>
+ 
+  <div id="wrap-all">
+ <div>
+  <div class="holdls">
+    
+     <div class="hidden" id="hids">
+      
+  <div>
+         <img  src="images/amstrad-cpc/adventure-c.jpg">
+         <h1 id="title">Adventure C: Ship of doom</h1>
+       </div>
+        
+        <div >
+        <div>
+         <h3>Arctic Computing Ltd.</h3>
+         <h3>1985</h3>
+         <h3>adventure</h3><br>
+          <p>While on a reconnaissance flight, your ship has been drawn by a Graviton Beam onto an Alien Cruiser. Fred, your pet android, informs you that the cruiser is on a Humanoid slave mission, its aim to seek out Humanoid planets from which samples are taken and their brains replaced by microchips. Your aim is to free your ship by pressing the control button in the main computer room. Of course, expect various hazards and puzzles to be in your way. The game features a simple 'Verb Noun' command interface, and no graphics of any description. Instructions such as 'insert key into hole' have to be split into two commands.</p>
+       </div>
+        </div>
+       
+      </div> 
+      <div id="contH">
+      
+       <div>
+         <img id="atI" src="images/amstrad-cpc/adventure-c.jpg">
+         <h1>Adventure C: Ship of doom</h1>
+       </div>
+        
+        <div id="id">
+        <div>
+         <h3>Arctic Computing Ltd.</h3>
+         <h3>1985</h3>
+         <h3>adventure</h3><br>
+          <p>While on a reconnaissance flight, your ship has been drawn by a Graviton Beam onto an Alien Cruiser. Fred, your pet android, informs you that the cruiser is on a Humanoid slave mission, its aim to seek out Humanoid planets from which samples are taken and their brains replaced by microchips. Your aim is to free your ship by pressing the control button in the main computer room. Of course, expect various hazards and puzzles to be in your way. The game features a simple 'Verb Noun' command interface, and no graphics of any description. Instructions such as 'insert key into hole' have to be split into two commands.</p>
+       </div>
+        </div>
+       
+      </div> 
+            
+       
+     </div>
+ </div>
+
+</div>
+<footer>
+  blah blah
+</footer>
+</body>
+</html>

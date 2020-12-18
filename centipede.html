@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/response.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <script type="text/javascript" src="js/response.js"></script>
+  <link rel="icon" href="images/icon_152_v2.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/info.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  .yes{
+  list-style:disc;
+    display: block;
+  list-style-type: disc;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 40px;
+}
+  .yes, .ls{
+    list-style:disc;
+  }
+  </style>
+</head>
+<body onload="my();">
+  <nav class="container">
+    <div id="main">
+     <div id="logo_holder" class="show">
+       <a id="logo" href="index"><img  src="images/logo.png" width="auto" height="80"></a>
+      </div> 
+      <div class="nav">
+        <div id="sec">
+         <a href="index" id="about">ABOUT</a>
+    <!--     <a href="songs" id="songs.html">SONGS</a>-->
+         <a href="#" id="games">GAMES<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="white"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="white"/></g></svg>
+         </a>
+         <a  href="gameplay" id="cont">CONTACT</a>
+       </div>
+    </div>
+    <div id="ham" class="hidden">
+   <a id="hamburger" class="hidden" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="31" viewBox="0 0 43 31">
+     <g transform="translate(-9612 -2916)">
+       <g transform="translate(9612 2916)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect width="43" height="9" stroke="none"/>
+         <rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+       <g transform="translate(9612 2927)" fill="#fff" stroke="#707070" stroke-width="1"><rect  width="43" height="9" stroke="none"/>
+         <rect x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g><!--onclick="Show()" -->
+       <g transform="translate(9612 2938)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect  width="43" height="9" stroke="none"/><rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+     </g>
+    </svg>
+    </a>
+    </div>
+    <div id="sub_nav_top" onmouseleave="leave()" class="hide">
+     <ul>
+       <li><a id="apple"  href="apple1">Apple1</a></li>
+       <li><a id="aco" href="acorn-electron">Acorn Electron</a></li>
+       <li><a id="amst" href="amstrad-cpc">Amstrad CPC</a></li>
+       <li><a id="atari" href="atari-5200">Atari 5200</a></li>
+       <li><a id="super" href="supergrax">SuperGrax</a></li>
+       <li><a id="virtual" href="virtual-boy">Virtual Boy</a></li>            
+     </ul> 
+    </div>
+    </div>
+<!--    debug-->
+   <div id="debug" class="hidden">
+<!--    fake varible-->
+     <p id="highlight">game</p>
+     <p id="what_ga" class="hiddens">atari</p>
+   </div>
+    <div id="back" class="hidden">
+    </div>
+    <div id="sub_nav" class="hidden">
+      <ul id="nav-lists">
+        <li class="close">
+          <span  id="close" class="img">x</span></li>
+        <li id="show_back" class="back hidden">
+          <a href="#" id="go_back" class="img "><svg class="left_arrow "  xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="back_arrow" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>BACK</a>
+        </li>
+         <li>
+          <a href="about" id="aboutS" class="img">ABOUT</a>
+        </li>
+        <li>
+          <a href="#" id="gameS" class="img">GAMES<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
+        </li>
+        <li class="bottm">
+          <a href="gameplay.html" id="contS"  class="img">CONTACT</a>  
+        </li>
+        <li class="hidden" id="ae"><a  href="acorn-electron">Acorn Electron</a></li>             
+       <li class="hidden" id="atarS"><a  href="atari-5200">Atari 5200</a></li>  
+       <li class="hidden" id="virt"><a  href="virtual-boy">Virtual Boy</a></li>  
+       <li class="hidden" id="superS"><a  href="supergrax">SuperGrax</a></li>  
+      </ul>
+    </div>    
+</nav>
+ 
+  <div id="wrap-all">
+ <div>
+  <div class="holdls">
+    
+     <div class="hidden" id="hids">
+      
+  <div>
+         <img  src="images/atari-5200/centipede.jpg">
+         <h1 id="title">
+Centipede</h1>
+       </div>
+        
+        <div >
+        <div>
+         <h3>Atari, Inc.</h3>
+         <h3>1983</h3>
+         <h3>Atari, Inc.
+Action, arcade, shooter</h3><br>
+          <p>In Centipede, the player is trapped in the Enchanted Forest. Armed with only a magic wand to ward off the forest's insect denizens, all of which apparently are attacking in the player in continuous waves.<br>
+
+The player must use the magic wand to shoot sparks at approaching insects to score points by pressing the controller button. Holding down the controller button will set the wand to rapid fire shots. If the player is bitten by an insect, the player will be temporarily paralyzed and lose one of the three starting magic wands.<br>
+
+Insect Opponents and Mushrooms<br>
+All enemy insects have a distinctive sound before attacking, which may help</p>
+      <ul class="yes">
+        <li class="ls"><b>The Centipede</b><br>The Centipede will attack in 12 waves. In the first wave, the Centipede will have a head attached to 11 body segments. In the second wave, the Centipede will have a head attached to 10 body segments, in addition to a detached head. The third wave will have the Centipede with an attached head, 9 body segments, plus two detached heads. These body segments will transform into heads and continue to do so until Wave 12. In the last wave, the Centipede will have 12 detached heads, independently attacking the player. Centipede heads are worth more points than body segments.<br>Attacks from the Centipede will come from the top of the screen, moving downward. If a spark hits any part of the Centipede, that particular body segment will transform into a mushroom, while the body segment behind it will become the new Centipede head. When the Centipede is destroyed, it will briefly disappear and re-appear from the top of the screen again.</li>
+        <li class="ls"><b>The Spider</b><br>The Spider will attempt to distract the player from attacking the Centipede. It will destroy any mushroom it touches. Spiders will score more points if it is hit in closer distances.</li>
+        <li class="ls"><b>The Flea</b><br>
+        The Flea will appear if the player has destroyed most of the existing mushrooms. It will drop down creating a new batch of mushrooms where it falls. The Flea will disappear after two hits. After the first hit, the Flea will drop down much faster.</li>
+        <li class="ls"><b>The Scorpion</b><br>The Scorpion will appear in the third wave. It moves slowly but will pick up speed, moving faster. While doing so, it will poison any mushroom it touches.</li>
+        <li class="ls"><b>Mushrooms</b><br>Mushrooms fill the Enchanted Forest and may act as obstacles or cover for the player, with added effects to enemy insects. It takes four shots to completly destroy a mushroom. There are two types of mushrooms: Magic Mushrooms and Poisonous mushrooms. Magic mushrooms are the default mushrooms in the game and are also the result of the player destroying an insect or Centipede body segment. Poisonous Mushrooms are the result of the Scorpion touching a mushroom. Poisonous Mushrooms will prompt the Centipede near it to move straight towards the player through any mushroom. Losing a wand will restore any partially damaged mushroom.</li>
+      </ul>
+      <p>Game Difficulty and Variations<br>
+The game offers four difficulty levels: Novice, Standard, Advanced, and Expert. Game Variations are as the following:</p>
+      <ul class="yes">
+        <li class="ls">One Player</li>
+        <li class="ls">Two Player Alternating<br>Two players will take turns when the active player is bitten.</li>
+        <li class="ls">Dual Player Competition<br>Two players will appear on the screen at the same time. Scoring is separate. Shots fired from one player will paralyze the other player.</li>
+        <li class="ls">Team Play Two players will appear on the screen at the same time. Scoring is combined. Shots fired from one player will not paralyze the other player.</li>
+      </ul>
+      <p>Scoring<br>
+The player will win a bonus magic wand for every 12,000 points to a maximum of six wands. The game will end when all wands are lost. Scoring are as the following:</p>
+      <ul class="yes">
+        <li class="ls">Centipede Head - 100 points</li>
+        <li class="ls">Centipede Body Segment - 10 points</li>
+        <li class="ls">Spider at close range - 900 points</li>
+        <li class="ls">Spider at medium range - 600 points</li>
+        <li class="ls">Flea - 200 points</li>
+        <li class="ls">Scorpion - 1,000 points</li>
+        <li class="ls">Restored mushroom - 5 points</li>
+        <li class="ls">Destroyed mushroom - 1 points</li>
+      </ul>
+       </div>
+        </div>
+       
+      </div> 
+      <div id="contH">
+      
+       <div>
+         <img id="atI" src="images/atari-5200/centipede.jpg" width="300px">
+         <h1>
+Centipede</h1>
+       </div>
+        
+        <div id="id">
+        <div>
+         <h3>Atari, Inc.</h3>
+         <h3>1983</h3>
+         <h3>Atari, Inc.
+Action, arcade, shooter</h3><br>
+          <p>In Centipede, the player is trapped in the Enchanted Forest. Armed with only a magic wand to ward off the forest's insect denizens, all of which apparently are attacking in the player in continuous waves.<br>
+
+The player must use the magic wand to shoot sparks at approaching insects to score points by pressing the controller button. Holding down the controller button will set the wand to rapid fire shots. If the player is bitten by an insect, the player will be temporarily paralyzed and lose one of the three starting magic wands.<br>
+
+Insect Opponents and Mushrooms<br>
+All enemy insects have a distinctive sound before attacking, which may help</p>
+      <ul class="yes">
+        <li class="ls"><b>The Centipede</b><br>The Centipede will attack in 12 waves. In the first wave, the Centipede will have a head attached to 11 body segments. In the second wave, the Centipede will have a head attached to 10 body segments, in addition to a detached head. The third wave will have the Centipede with an attached head, 9 body segments, plus two detached heads. These body segments will transform into heads and continue to do so until Wave 12. In the last wave, the Centipede will have 12 detached heads, independently attacking the player. Centipede heads are worth more points than body segments.<br>Attacks from the Centipede will come from the top of the screen, moving downward. If a spark hits any part of the Centipede, that particular body segment will transform into a mushroom, while the body segment behind it will become the new Centipede head. When the Centipede is destroyed, it will briefly disappear and re-appear from the top of the screen again.</li>
+        <li class="ls"><b>The Spider</b><br>The Spider will attempt to distract the player from attacking the Centipede. It will destroy any mushroom it touches. Spiders will score more points if it is hit in closer distances.</li>
+        <li class="ls"><b>The Flea</b><br>
+        The Flea will appear if the player has destroyed most of the existing mushrooms. It will drop down creating a new batch of mushrooms where it falls. The Flea will disappear after two hits. After the first hit, the Flea will drop down much faster.</li>
+        <li class="ls"><b>The Scorpion</b><br>The Scorpion will appear in the third wave. It moves slowly but will pick up speed, moving faster. While doing so, it will poison any mushroom it touches.</li>
+        <li class="ls"><b>Mushrooms</b><br>Mushrooms fill the Enchanted Forest and may act as obstacles or cover for the player, with added effects to enemy insects. It takes four shots to completly destroy a mushroom. There are two types of mushrooms: Magic Mushrooms and Poisonous mushrooms. Magic mushrooms are the default mushrooms in the game and are also the result of the player destroying an insect or Centipede body segment. Poisonous Mushrooms are the result of the Scorpion touching a mushroom. Poisonous Mushrooms will prompt the Centipede near it to move straight towards the player through any mushroom. Losing a wand will restore any partially damaged mushroom.</li>
+      </ul>
+      <p>Game Difficulty and Variations<br>
+The game offers four difficulty levels: Novice, Standard, Advanced, and Expert. Game Variations are as the following:</p>
+      <ul class="yes">
+        <li class="ls">One Player</li>
+        <li class="ls">Two Player Alternating<br>Two players will take turns when the active player is bitten.</li>
+        <li class="ls">Dual Player Competition<br>Two players will appear on the screen at the same time. Scoring is separate. Shots fired from one player will paralyze the other player.</li>
+        <li class="ls">Team Play Two players will appear on the screen at the same time. Scoring is combined. Shots fired from one player will not paralyze the other player.</li>
+      </ul>
+      <p>Scoring<br>
+The player will win a bonus magic wand for every 12,000 points to a maximum of six wands. The game will end when all wands are lost. Scoring are as the following:</p>
+      <ul class="yes">
+        <li class="ls">Centipede Head - 100 points</li>
+        <li class="ls">Centipede Body Segment - 10 points</li>
+        <li class="ls">Spider at close range - 900 points</li>
+        <li class="ls">Spider at medium range - 600 points</li>
+        <li class="ls">Flea - 200 points</li>
+        <li class="ls">Scorpion - 1,000 points</li>
+        <li class="ls">Restored mushroom - 5 points</li>
+        <li class="ls">Destroyed mushroom - 1 points</li>
+      </ul>
+       </div>
+        </div>
+       
+      </div> 
+            
+       
+     </div>
+ </div>
+
+</div>
+<footer id="foot">
+  blah blah
+</footer>
+<script>
+  var footer = document.getElementById("foot"),
+      a="400";
+
+  console.log(window.outerHeight+window.innerHeight+"px");
+  console.log("height:"+window.innerHeight+"px");
+  console.log(screen.availHeight+"px");
+  console.log("width:"+window.innerWidth+"px");
+  if (window.innerWidth<=500){
+    console.log("yes");
+    footer.style.top=window.outerHeight+window.innerHeight+"px";
+  }
+  else{
+    footer.style.top=window.innerHeight+"px";
+  }
+  
+  </script>
+</body>
+</html>
