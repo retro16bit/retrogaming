@@ -2,9 +2,242 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/response.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script type="text/javascript" src="js/response.js"></script>
+  <link rel="icon" href="images/icon_152_v2.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
-<body>
-  <h1>Nothing exists</h1>
+<body onload="my()">
+<!-- navigation-->
+<!-- the hrefs don't have .html is because I wanted to overide www.somethng.com/hi.html default and make into www.somethng.com/hi . That is what is going on with the hrefs, this is not a mistake.-->
+  <nav class="container">
+    <div id="main">
+     <div id="logo_holder" class="show">
+       <a id="logo" href="index"><img  src="images/logo.png" width="auto" height="80"></a>
+      </div> 
+      <div class="nav">
+        <div id="sec">
+         <a href="index" id="about">ABOUT</a>
+    <!--     <a href="songs" id="songs.html">SONGS</a>-->
+         <a href="#" id="games">GAMES<svg class="path" id="downC" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g class="path" id="colorize" transform="translate(13 11) rotate(180)" fill="white"><path id="pathT" class="path" d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path id="pathO" class="path"  d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="white"/></g></svg>
+         </a>
+         <a  href="contact" id="cont">CONTACT</a>
+       </div>
+    </div>
+    <div id="ham" class="hidden">
+   <a id="hamburger" class="hidden" >
+    <svg xmlns="http://www.w3.org/2000/svg" width="43" height="31" viewBox="0 0 43 31">
+     <g transform="translate(-9612 -2916)">
+       <g transform="translate(9612 2916)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect width="43" height="9" stroke="none"/>
+         <rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+       <g transform="translate(9612 2927)" fill="#fff" stroke="#707070" stroke-width="1"><rect  width="43" height="9" stroke="none"/>
+         <rect x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g><!--onclick="Show()" -->
+       <g transform="translate(9612 2938)" fill="#fff" stroke="#707070" stroke-width="1">
+         <rect  width="43" height="9" stroke="none"/><rect  x="0.5" y="0.5" width="42" height="8" fill="none"/>
+       </g>
+     </g>
+    </svg>
+    </a>
+    </div>
+    <div id="sub_nav_top" onmouseleave="leave()" class="hidden">
+     <ul>
+       <li><a id="apple" href="apple1">Apple1</a></li>
+<!--       <li><a id="aco" href="acorn-electron">Acorn Electron</a></li>-->
+       <li><a id="amst" href="amstrad-cpc">Amstrad CPC</a></li>
+       <li><a id="atari" href="atari-5200">Atari 5200</a></li>
+<!--       <li><a id="super" href="supergrax">SuperGrax</a></li>-->
+<!--       <li><a id="virtual" href="virtual-boy">Virtual Boy</a></li>            -->
+     </ul> 
+    </div>
+    </div>
+<!--    debug-->
+   <div id="debug" class="hidden">
+<!--    fake varible-->
+     <p id="highlight">home</p>
+   </div>
+    <div id="back" class="hidden">
+    </div>
+    <div id="sub_nav" class="hidden">
+      <ul id="nav-lists">
+        <li class="close">
+          <span  id="close" class="img">x</span></li>
+        <li id="show_back" class="back hidden">
+          <a href="#" id="go_back" class="img "><svg class="left_arrow "  xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="back_arrow" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg>BACK</a>
+        </li>
+         <li>
+          <a href="about" id="aboutS" class="img">ABOUT</a>
+        </li>
+        <li>
+          <a href="#" id="gameS" class="img">GAMES<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
+        </li>
+        <li class="bottm">
+          <a href="contact" id="contS"  class="img">CONTACT</a>  
+        </li>
+<!--        <li class="hidden" id="ae"><a  href="acorn-electron">Acorn Electron</a></li>             -->
+       <li class="hidden" id="atarS"><a  href="atari-5200">Atari 5200</a></li>  
+<!--       <li class="hidden" id="virt"><a  href="virtual-boy">Virtual Boy</a></li>  -->
+<!--       <li class="hidden" id="superS"><a  href="supergrax">SuperGrax</a></li>  -->
+      </ul>
+    </div>    
+</nav>
+ <!-- test section -->
+<!--
+<div  style="background-color: red;height: 50px">
+</div>
+-->
+
+<div id="wrap-all">
+<!--
+ <div id="ndsf">
+     <h1>POPULAR GAMES</h1>
+ </div>
+-->
+
+ <section style="margin-right: 30px; margin-bottom: 30px;">
+   <p>Find Atari 5200, Apple 1 and Amstrad CPC game info on this website. 
+   <br>This website does not contain all games available on the systems.</p><br>
+   <h1>Sources</h1>
+   <ul class="source">
+     <li><a href="https://www.video-games-museum.com">https://www.video-games-museum.com</a></li>
+     <li>https://romsmania.cc</li>
+     <li><a href="https://jamesbond.fandom.com/wiki/The_Living_Daylights_(video_game)">https://jamesbond.fandom.com/wiki/The_Living_Daylights_(video_game)</a></li>
+     <li><a href="https://www.retroplace.com/fr/jeux/7832--1001-bc">https://www.retroplace.com/fr/jeux/7832--1001-bc</a></li>
+     <li><a href="https://www.mobygames.com">https://www.mobygames.com</a></li>
+     <li><a href="https://www.mobygames.com/game/cpc/1942arcade
+https://videogamegeek.com/videogame/121140/1001-bc-mediterranean-odyssey">https://www.mobygames.com/game/cpc/1942arcade
+https://videogamegeek.com/videogame/121140/1001-bc-mediterranean-odyssey</a></li>
+     <li><a href="https://gamesdb.launchbox-app.com/games/details/31184">https://gamesdb.launchbox-app.com/games/details/31184</a></li><br>
+     <li>Images</li>
+     <li><a href="https://pbs.twimg.com/media/EfHweuHWsAI2nGA.jpg:large">https://pbs.twimg.com/media/EfHweuHWsAI2nGA.jpg:large</a></li>
+     <li><a href="https://cpcrulez.fr/im4/1/47710393.jpg">https://cpcrulez.fr/im4/1/47710393.jpg</a></li>
+     <li><a href="https://www.emurom.net/images/emulation/commodore_64/screenshots/10th_Frame_(Access)_[Back].webp">https://www.emurom.net/images/emulation/commodore_64/screenshots/10th_Frame_(Access)_[Back].webp</a></li>
+     <li><a href="https://www.weihenstephan.org/~michaste/temp/pagetable/apple1basic.jpg">https://www.weihenstephan.org/~michaste/temp/pagetable/apple1basic.jpg (2)</a></li>
+     <li><a href="https://i.ytimg.com/vi/u106LvRFM2Y/maxresdefault.jpg">https://i.ytimg.com/vi/u106LvRFM2Y/maxresdefault.jpg</a></li>
+     <li><a href="https://i.ytimg.com/vi/_SouqUzP-Vo/hqdefault.jpg ">https://i.ytimg.com/vi/_SouqUzP-Vo/hqdefault.jpg </a></li>
+     <li><a href="https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Lunar_Lander.png/500px-Lunar_Lander.png">https://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Lunar_Lander.png/500px-Lunar_Lander.png</a></li>
+     <li><a href="https://www.video-games-museum.com/en/game/Street-Fighter/38/3/26229
+https://www.video-games-museum.com/en/screenshots/Amstrad%20CPC/1/26229-title-Street-Fighter.jpg">https://www.video-games-museum.com/en/game/Street-Fighter</a></li>
+     <li><a href="https://static.wikia.nocookie.net/jamesbond/images/d/da/JThe_Living_Daylights-_The_Computer_Game.jpg/">https://static.wikia.nocookie.net/jamesbond/images/d/da/JThe_Living_Daylights-_The_Computer_Game.jpg/</a></li>
+     <li><a href="https://www.video-games-museum.com/en/screenshots/Amstrad%20CPC/1/11281-title-10th-Frame.jpg">https://www.video-games-museum.com/en/screenshots/Amstrad%20CPC/1/11281-title-10th-Frame.jpg</a></li>
+     <li><a href="https://www.video-games-museum.com/en/screenshots/Amstrad%20CPC/3/11283-ingame-12-Lost-Souls.jpg ">https://www.video-games-museum.com/en/screenshots/Amstrad%20CPC/3/11283-ingame-12-Lost-Souls.jpg </a></li>
+     <li><a href="https://www.arcade-history.com/images/covermini160/64107_1.jpg ">https://www.arcade-history.com/images/covermini160/64107_1.jpg </a></li>
+     <li><a href="https://www.mobygames.com/game/cpc/1942arcade/cover-art/gameCoverId,599738/
+https://www.mobygames.com/images/covers/l/599738-1942-amstrad-cpc-front-cover.jpg">1942</a></li>
+     <li><a href="https://www.mobygames.com/game/cpc/007-licence-to-kill/cover-art/gameCoverId,476806/
+https://www.mobygames.com/images/covers/l/476806-007-licence-to-kill-amstrad-cpc-front-cover.jpg">https://www.mobygames.com/game/cpc/007-licence-to-kill/cover-art/gameCoverId,476806/</a></li>
+     <li><a href="https://upload.wikimedia.org/wikipedia/en/5/59/4x4_Off-Road_Racing_Cover.png ">https://upload.wikimedia.org/wikipedia/en/5/59/4x4_Off-Road_Racing_Cover.png </a></li>
+     <li><a href="https://www.retroplace.com/pics/cpc/packshots/7867--ace-of-aces.png ">https://www.retroplace.com/pics/cpc/packshots/7867--ace-of-aces.png </a></li>
+     <li><a href="https://www.mobygames.com/images/covers/l/100096-acheton-dos-front-cover.jpg ">https://www.mobygames.com/images/covers/l/100096-acheton-dos-front-cover.jpg </a></li>
+     <li><a href="https://www.mobygames.com/game/cpc/adventure-c/cover-art/gameCoverId,369005/
+https://www.mobygames.com/images/covers/l/369005-adventure-c-amstrad-cpc-front-cover.jpg">https://www.mobygames.com/game/cpc/adventure-c/cover-art/gameCoverId,369005/
+</a></li>
+     <li><a href="https://upload.wikimedia.org/wikipedia/en/2/26/Ancient_Art_of_War_Cover.jpg ">https://upload.wikimedia.org/wikipedia/en/2/26/Ancient_Art_of_War_Cover.jpg </a></li>
+     <li><a href="https://upload.wikimedia.org/wikipedia/en/e/ea/Archon_box.png">https://upload.wikimedia.org/wikipedia/en/e/ea/Archon_box.png</a></li>
+     <li><a href="https://www.mobygames.com/game/cpc/arkanoid-revenge-of-doh/cover-art/gameCoverId,673160/
+https://www.mobygames.com/images/covers/l/673160-arkanoid-revenge-of-doh-amstrad-cpc-front-cover.jpg">https://www.mobygames.com/game/cpc/arkanoid-revenge-of-doh/cover-art/gameCoverId,673160/
+</a></li>
+     <li><a href="https://upload.wikimedia.org/wikipedia/en/thumb/9/99/ATF_Inlay.jpg/220px-ATF_Inlay.jpg">https://upload.wikimedia.org/wikipedia/en/thumb/9/99/ATF_Inlay.jpg/220px-ATF_Inlay.jpg</a></li>
+     <li><a href="https://www.mobygames.com/game/cpc/batman__/cover-art/gameCoverId,59857/
+https://www.mobygames.com/images/covers/l/59857-batman-amstrad-cpc-front-cover.jpg">https://www.mobygames.com/game/cpc/batman__/cover-art/gameCoverId,59857/
+</a></li>
+     <li><a href="https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Ballyhoo_box_art.jpg/220px-Ballyhoo_box_art.jpg">https://upload.wikimedia.org/wikipedia/en/thumb/0/0e/Ballyhoo_box_art.jpg/220px-Ballyhoo_box_art.jpg</a></li>
+     <li><a href="https://www.mobygames.com/game/cpc/bad-dudes/cover-art/gameCoverId,476849/
+https://www.mobygames.com/images/covers/l/476849-bad-dudes-amstrad-cpc-front-cover.jpg">https://www.mobygames.com/game/cpc/bad-dudes/cover-art/gameCoverId,476849/
+</a></li>
+     <li><a href="https://www.mobygames.com/game/cpc/back-to-the-future-part-ii/cover-art/gameCoverId,478082/
+https://www.mobygames.com/images/covers/l/478082-back-to-the-future-part-ii-amstrad-cpc-front-cover.jpg">Back to the future II</a></li>
+     <li><a href="https://www.mobygames.com/images/covers/l/13945-baby-jo-in-going-home-dos-front-cover.jpg">https://www.mobygames.com/images/covers/l/13945-baby-jo-in-going-home-dos-front-cover.jpg</a></li>
+     <li><a href="https://www.mobygames.com/game/cpc/bat/cover-art/gameCoverId,84110/
+https://www.mobygames.com/images/covers/l/84110-b-a-t-amstrad-cpc-front-cover.jpg">https://www.mobygames.com/game/cpc/bat/cover-art/gameCoverId,84110/
+</a></li>
+     <li><a href="https://upload.wikimedia.org/wikipedia/en/c/c5/BeachVolleyAmigaCover.jpg ">Beach Volly</a></li>
+     <li><a href="https://www.gamesdatabase.org/Media/SYSTEM/Amstrad_CPC/Box/big/Bionic_Commando_-_1988_-_GO!.jpg">https://www.gamesdatabase.org/Media/SYSTEM/Amstrad_CPC/Box/big/Bionic_Commando_-_1988_-_GO!.jpg</a></li>
+     <li><a href="https://www.google.com/
+https://images-na.ssl-images-amazon.com/images/I/51IbgNtIX1L.jpg">https://www.google.com/
+https://images-na.ssl-images-amazon.com/images/I/51IbgNtIX1L.jpg</a></li>
+     <li><a href="https://www.video-games-museum.com/en/boxart/Atari%205200/23950_us-Pac-Man.jpg">https://www.video-games-museum.com/en/boxart/Atari%205200/23950_us-Pac-Man.jpg</a></li>
+     <li><a href="https://www.video-games-museum.com/en/boxart/Atari%205200/23990-Star-Wars-ROTJ-Death-Star-Battle.jpg">https://www.video-games-museum.com/en/boxart/Atari%205200/23990-Star-Wars-ROTJ-Death-Star-Battle.jpg</a></li>
+     <li><a href="https://www.video-games-museum.com/en/boxart/Atari%205200/23965_eu-Star-Wars-The-Arcade-Game.jpg ">https://www.video-games-museum.com/en/boxart/Atari%205200/23965_eu-Star-Wars-The-Arcade-Game.jpg </a></li>
+     <li><a href="https://i.ytimg.com/vi/bVl1el8qWJw/maxresdefault.jpg">https://i.ytimg.com/vi/bVl1el8qWJw/maxresdefault.jpg</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/astro-chase/cover-art/gameCoverId,27665/
+https://www.mobygames.com/images/covers/l/27665-astro-chase-atari-5200-front-cover.jpg">https://www.mobygames.com/game/atari-5200/astro-chase/cover-art/gameCoverId,27665/
+</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/adventure-ii/cover-art/gameCoverId,87806/
+https://www.mobygames.com/images/covers/l/87806-adventure-ii-atari-5200-front-cover.jpg">https://www.mobygames.com/game/atari-5200/adventure-ii/cover-art/gameCoverId,87806/
+</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/activision-decathlon/cover-art/gameCoverId,28284/
+https://www.mobygames.com/images/covers/l/28284-the-activision-decathlon-atari-5200-front-cover.jpg">Decathlon</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/star-trek-strategic-operations-simulator/cover-art/gameCoverId,30257/
+https://www.mobygames.com/images/covers/l/30257-star-trek-strategic-operations-simulator-atari-5200-front-cover.jpg">https://www.mobygames.com/game/atari-5200/star-trek-strategic-operations-simulator/cover-art/gameCoverId,30257/
+https://www.mobygames.com/images/covers/l/30257-star-trek-strategic-operations-simulator-atari-5200-front-cover.jpg</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/star-raiders/cover-art/gameCoverId,27362/
+https://www.mobygames.com/images/covers/l/27362-star-raiders-atari-5200-front-cover.jpg">https://www.mobygames.com/game/atari-5200/star-raiders/cover-art/gameCoverId,27362/
+</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/ballblazer/cover-art/gameCoverId,27270/
+https://www.mobygames.com/images/covers/l/27270-ballblazer-atari-5200-front-cover.jpg">https://www.mobygames.com/game/atari-5200/ballblazer/cover-art/gameCoverId,27270/
+</a></li>
+     <li><a href="https://www.google.com/
+https://www.retroplace.com/pics/atari5200/packshots/5209--beamrider.png">https://www.google.com/
+https://www.retroplace.com/pics/atari5200/packshots/5209--beamrider.png</a></li>
+     <li><a href="https://www.google.com/
+https://cdn.thegamesdb.net/images/original/boxart/front/5132-1.jpg">https://www.google.com/
+https://cdn.thegamesdb.net/images/original/boxart/front/5132-1.jpg</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/berzerk/cover-art/gameCoverId,27347/
+https://www.mobygames.com/images/covers/l/27347-berzerk-atari-5200-front-cover.jpg">https://www.mobygames.com/game/atari-5200/berzerk/cover-art/gameCoverId,27347/
+https://www.mobygames.com/images/covers/l/27347-berzerk-atari-5200-front-cover.jpg</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/blueprint/cover-art/gameCoverId,27476/
+https://www.mobygames.com/images/covers/l/27476-blueprint-atari-5200-front-cover.jpg">Blueprint</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/boulder-dash-ii-rockfords-revenge/cover-art/gameCoverId,56262/
+https://www.mobygames.com/images/covers/l/56262-boulder-dash-ii-rockford-s-revenge-atari-5200-front-cover.jpg">Boulder Dash II</a></li>
+     <li><a href="https://www.google.com/
+https://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Bounty_bob_strikes_back.jpg/220px-Bounty_bob_strikes_back.jpg">Bounty Bob</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/frogger/cover-art/gameCoverId,27267/
+https://www.mobygames.com/images/covers/l/27267-frogger-atari-5200-front-cover.jpg">Frogger</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/dig-dug/cover-art/gameCoverId,27246/
+https://www.mobygames.com/images/covers/l/27246-dig-dug-atari-5200-front-cover.jpg">Dig Dug</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/choplifter/cover-art/gameCoverId,27445/
+https://www.mobygames.com/images/covers/l/27445-choplifter-atari-5200-front-cover.jpg">Choplifter</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/centipede_/cover-art/gameCoverId,27316/
+https://www.mobygames.com/images/covers/l/27316-centipede-atari-5200-front-cover.jpg">Centipede</a></li>
+     <li><a href="https://www.google.com/
+https://atariage.com/store/images/products/5200_CastleCrisis_detail_large.jpg">Castle Crisis</a></li>
+     <li><a href="https://www.google.com/
+https://cdn.thegamesdb.net/images/original/boxart/front/22376-1.jpg">Castle Blast</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/buck-rogers-planet-of-zoom/cover-art/gameCoverId,27485/
+https://www.mobygames.com/images/covers/l/27485-buck-rogers-planet-of-zoom-atari-5200-front-cover.jpg">Buck Rogers</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/galaxian
+https://www.mobygames.com/images/covers/s/27350-galaxian-atari-5200-front-cover.jpg">Galaxian</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/hero/cover-art/gameCoverId,28328/
+https://www.mobygames.com/images/covers/l/28328-h-e-r-o-atari-5200-front-cover.jpg">H.E.R.O.</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/mario-bros/cover-art/gameCoverId,27200/
+https://www.mobygames.com/images/covers/l/27200-mario-bros-atari-5200-front-cover.jpg">Mario Bros.</a></li>
+     <li><a href="https://www.mobygames.com/game/atari-5200/megamania/cover-art/gameCoverId,27396/
+https://www.mobygames.com/images/covers/l/27396-megamania-atari-5200-front-cover.jpg">Megamania</a></li>
+   </ul>
+ </section>
+</div>
+<footer id="footer">Jessi L 2020</footer>
+<!--
+<script>
+  var footer=document.getElementById("footer");
+  console.log(window.outerHeight+window.innerHeight+"px");
+  console.log(screen.availHeight+"px");
+  footer.style.top=window.outerHeight+window.innerHeight+"px";
+  </script>
+-->
 </body>
 </html>
