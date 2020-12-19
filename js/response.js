@@ -18,6 +18,7 @@ function my(){
   document.getElementById("nav-lists").addEventListener("mouseover", hover);
   document.getElementById("nav-lists").addEventListener("mouseout", gone);
   document.getElementById("ham").addEventListener("click", click);
+  document.getElementById("sub_nav_top").style.display="none";
   //this fixed error for some reason...
   document.getElementById("main").addEventListener("click", clicked);
   document.getElementById("main").addEventListener("mouseover", hov);
