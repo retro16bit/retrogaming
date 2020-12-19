@@ -263,7 +263,7 @@ label {
 	    padding-right: 10px;
 	    margin-top: 10px; 
 }
-input{ margin-top: 10px; 
+input,textarea{ margin-top: 10px; 
                   display: block; } 
 #submit { 
   margin-left: 110px; 
