@@ -1,11 +1,22 @@
 /*updated*/
+#ndsf{
+  width: 100%;
+}
 #popu{
   margin-top: 100px;
+  margin-right: auto;
+  margin-left: auto;
   display: inline-flex;
 /*  width: 100%;*/
 /*  background-color: aqua;*/
   padding: 0;
   margin: auto;
+/*  width: 100%; */
+  flex-wrap: wrap;
+}
+#popu li:hover{
+/*  border: 1px red solid;*/
+  background-color: gray;
 }
 #popu li{
   margin-right: 15px;
