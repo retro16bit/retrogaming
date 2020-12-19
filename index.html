@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/response.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
   <script type="text/javascript" src="js/response.js"></script>
   <link rel="icon" href="images/icon_152_v2.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -14,7 +15,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/typography.css">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body onload="my()">
 <!-- navigation-->
@@ -54,10 +56,11 @@
     <div id="sub_nav_top" onmouseleave="leave()" class="hide">
      <ul>
        <li><a id="apple" href="apple1">Apple1</a></li>
-
+<!--       <li><a id="aco" href="acorn-electron">Acorn Electron</a></li>-->
        <li><a id="amst" href="amstrad-cpc">Amstrad CPC</a></li>
        <li><a id="atari" href="atari-5200">Atari 5200</a></li>
-         
+<!--       <li><a id="super" href="supergrax">SuperGrax</a></li>-->
+<!--       <li><a id="virtual" href="virtual-boy">Virtual Boy</a></li>            -->
      </ul> 
     </div>
     </div>
@@ -82,9 +85,12 @@
           <a href="#" id="gameS" class="img">GAMES<svg id="right_arrow" xmlns="http://www.w3.org/2000/svg" width="13" height="11" viewBox="0 0 13 11"><g id="cR" transform="translate(13 11) rotate(180)" fill="#707070"><path d="M 12.12378215789795 10.5 L 0.8762181997299194 10.5 L 6.5 0.9828307628631592 L 12.12378215789795 10.5 Z" stroke="none"/><path d="M 6.5 1.965688705444336 L 1.75245189666748 10 L 11.24754810333252 10 L 6.5 1.965688705444336 M 6.5 0 L 13 11 L 0 11 L 6.5 0 Z" stroke="none" fill="#707070"/></g></svg></a>
         </li>
         <li class="bottm">
-          <a href="gameplay" id="contS"  class="img">CONTACT</a>  
+          <a href="contact" id="contS"  class="img">CONTACT</a>  
         </li>
- 
+<!--        <li class="hidden" id="ae"><a  href="acorn-electron">Acorn Electron</a></li>             -->
+       <li class="hidden" id="atarS"><a  href="atari-5200">Atari 5200</a></li>  
+<!--       <li class="hidden" id="virt"><a  href="virtual-boy">Virtual Boy</a></li>  -->
+<!--       <li class="hidden" id="superS"><a  href="supergrax">SuperGrax</a></li>  -->
       </ul>
     </div>    
 </nav>
@@ -93,5 +99,90 @@
 <div  style="background-color: red;height: 50px">
 </div>
 -->
+
+<div id="wrap-all">
+ <div id="ndsf">
+     <h1>POPULAR GAMES</h1>
+   <ul id="popu">
+    <li>
+      <a href="star_trek">
+      <div class="holdls">
+      <div class="imghl">
+        <img id="atI" src="images/apple1/startrek.jpg" width="190">
+      </div>       
+       <h3>Star Trek (1976) </h3>
+       <h4>Apple 1</h4>
+     </div>
+     </a>
+    </li>
+     <li>
+     <a href="street_fighter">
+      <div class="holdls">
+      <div class="imghl" >
+        <img id="amsI" src="images/amstrad-cpc/26229-title-Street-Fighter.jpg" width="200">
+      </div>       
+       <h3>Street Fighter (1988)</h3>
+       <h4>Amstrad CPC</h4>
+     </div>
+     </a>
+    </li>
+     <li>
+     <a href="pac-man">
+      <div class="holdls">
+      <div class="imghl" >
+        <img  src="images/atari-5200/Pac-Man.jpg" width="150">
+      </div>       
+       <h3>Pac-Man (1982)</h3>
+       <h4>Atari 5200</h4>
+     </div>
+      </a>
+    </li>
+    <li>
+     <a href="pac-man">
+      <div class="holdls">
+      <div class="imghl" >
+        <img  src="images/amstrad-cpc/back-to-the-future-part-ii.jpg" width="150">
+      </div>       
+       <h3>Back to the Future part II (1990)</h3>
+       <h4>Amstrad CPC</h4>
+     </div>
+      </a>
+    </li>
+    <li>
+     <a href="beach_volly">
+      <div class="holdls">
+      <div class="imghl" >
+        <img  src="images/amstrad-cpc/BeachVolley.jpg" width="150">
+      </div>       
+       <h3>Beach Volley (1989)</h3>
+       <h4>Amstrad CPC</h4>
+     </div>
+      </a>
+    </li>
+    <li>
+     <a href="berzerk">
+      <div class="holdls">
+      <div class="imghl" >
+        <img  src="images/atari-5200/berzerk.jpg" width="150">
+      </div>       
+       <h3>Berzerk (1984)</h3>
+       <h4>Atari 5200</h4>
+     </div>
+      </a>
+    </li>
+   </ul>
+ </div>
+ <hr>
+ <section style="margin-right: 30px; margin-bottom: 30px;">
+   <p>Check out games from Atari 5200, Apple 1 and Amstrad CPC on this website.</p>
+ </section>
+</div>
+<footer>Hi</footer>
+<script>
+  console.log(height.scrollHeight+"px");
+  console.log(window.outerHeight+window.innerHeight+"px");
+  console.log(screen.availHeight+"px");
+  footer.style.top=window.outerHeight+window.innerHeight+"px";
+  </script>
 </body>
 </html>
