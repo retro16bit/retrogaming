@@ -1,4 +1,4 @@
-//
+//updated
 //hover, click for nav
 
 // connects side sub-nav and hamburger icon
@@ -9,7 +9,7 @@ function my(){
       document.getElementById("about").style.color="red";
     }
     else if (document.getElementById("highlight").innerHTML === "game"){
-      document.getElementById("game").style.color="red";
+      document.getElementById("games").style.color="red";
       document.getElementById("colorize").style.fill="red";
     }else if (document.getElementById("highlight").innerHTML === "cont"){
       document.getElementById("cont").style.color="red";
@@ -18,7 +18,8 @@ function my(){
   document.getElementById("nav-lists").addEventListener("mouseover", hover);
   document.getElementById("nav-lists").addEventListener("mouseout", gone);
   document.getElementById("ham").addEventListener("click", click);
-  document.getElementById("sub_nav_top").style.opacity="0";//this fixed error for some reason...
+  document.getElementById("sub_nav_top").style.display="block";
+  //this fixed error for some reason...
   document.getElementById("main").addEventListener("click", clicked);
   document.getElementById("main").addEventListener("mouseover", hov);
 //  document.getElementById("main").addEventListener("mouseout", off);
@@ -99,9 +100,15 @@ function clickedSomething(event){
     document.getElementById("contS").innerHTML ="Amstrad CPC";
     document.getElementById("contS").href = "amstrad-cpc";
     //hidden section
+    document.getElementById("ae").style.display="block"; 
+    document.getElementById("ae").style.color="white"; 
 
-
-
+    document.getElementById("atarS").style.display="block";
+    document.getElementById("atarS").style.color="white";
+    document.getElementById("virt").style.display="block";
+    document.getElementById("virt").style.color="white"; 
+    document.getElementById("superS").style.display="block";
+    document.getElementById("superS").style.color="white"; 
     
     //show game section debug
     document.getElementById("gameS").classList.add("hidden");
@@ -110,14 +117,15 @@ function clickedSomething(event){
   }else if ((event.target.id)==="go_back") {
     document.getElementById("show_back").style.display="none";
     document.getElementById("aboutS").innerHTML ="ABOUT";
-    document.getElementById("aboutS").href = "about";
+    document.getElementById("aboutS").href = "about.html";
     document.getElementById("right_arrow").style.opacity="1";
     document.getElementById("contS").innerHTML ="CONTACT";
-    document.getElementById("contS").href = "contact";
+    document.getElementById("contS").href = "contact.html";
     document.getElementById("gameS").classList.remove("hidden");
-
-
-
+    document.getElementById("atarS").style.display="none";
+    document.getElementById("virt").style.display="none";
+    document.getElementById("superS").style.display="none";
+    document.getElementById("ae").style.display="none";
   }else if ((event.target.id)==="close") {
     document.getElementById("sub_nav").style.display="none";
     document.getElementById("back").style.display="none";
@@ -154,14 +162,14 @@ function clicked(event){
   }
   if ((event.target.id)==="game" || (event.target.id)=== "pathT" || (event.target.id)=== "path" || (event.target.id)=== "pathO" ||(event.target.id)=== "downC"){
     console.log("clickd on <a>");//debug  
-    if (sub_nav.style.opacity === "0"){
+    if (sub_nav.style.display === "none"){
       console.log("object hidden");//debug
       color.style.fill = "red";
       downC.style.transform="rotate(180deg)";
-      sub_nav.style.opacity="1";
-    }else if (sub_nav.style.opacity === "1"){
+      sub_nav.style.display="block";
+    }else if (sub_nav.style.display ==="block"){
       console.log("object showing");//debug
-      sub_nav.style.opacity="0";
+      sub_nav.style.display="none";
       downC.style.transform="rotate(360deg)";
     }else{
       console.log("error");//something is broken 
@@ -185,20 +193,20 @@ function hov(event){
   if ((event.target.id)==="games") {
     color.style.fill = "red";
     downC.style.transform="rotate(180deg)";
-    if (sub_nav.style.opacity === "0") {
-      sub_nav.style.opacity="1";
+    if (sub_nav.style.display === "none") {
+      sub_nav.style.display="block";
     }   
   }else if ((event.target.id)=== "pathT" || (event.target.id)=== "path" || (event.target.id)=== "pathO" ||(event.target.id)=== "downC"){
     color.style.fill = "red";
     downC.style.transform="rotate(180deg)";
-    if (sub_nav.style.opacity === "0") {
-      sub_nav.style.opacity="1";
+    if (sub_nav.style.display === "none") {
+      sub_nav.style.display="block";
     }
     if ((event.target.id)=== "sub_nav_top" || (event.target.id)=== "apple1" || (event.target.id)=== "aco" ||(event.target.id)=== "amst" ||(event.target.id)=== "super" || (event.target.id)=== "virtual" || (event.target.id)==="atari" || (event.target.id)==="games") {
-      sub_nav.style.opacity="1";
+      sub_nav.style.display="block";
     }
   } else if((event.target.id)==="about" || (event.target.id)==="songs" || (event.target.id)==="game"){
-    sub_nav.style.opacity ="0";
+    sub_nav.style.display ="none";
     color.style.fill="white";
     downC.style.transform="rotate(360deg)";
   }
@@ -209,7 +217,7 @@ function leave(){
   var downC = document.getElementById("downC"),
       sub_nav = document.getElementById("sub_nav_top"),
       color = document.getElementById("colorize");
-  sub_nav.style.opacity="0";
+  sub_nav.style.display="none";
   color.style.fill="white";
   downC.style.transform="rotate(360deg)";
 }
