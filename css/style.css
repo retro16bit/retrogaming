@@ -1,3 +1,4 @@
+/*needs to be updated*/
 body{
   display: block;
   padding-right: 30px;
@@ -250,3 +251,4 @@ position: absolute;
   padding-left: 45px;
   margin-top: 90px;
 }
+input{color: black;}
