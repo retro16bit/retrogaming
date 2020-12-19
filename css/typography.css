@@ -10,6 +10,6 @@
 a{
   text-decoration: none;
 }
-#id,h1,h3,p,h4,input{
+#id,h1,h3,p,h4,input,textarea{
   font-family: 'Roboto', sans-serif;
 }
