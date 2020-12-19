@@ -99,15 +99,9 @@ function clickedSomething(event){
     document.getElementById("contS").innerHTML ="Amstrad CPC";
     document.getElementById("contS").href = "amstrad-cpc";
     //hidden section
-    document.getElementById("ae").style.display="block"; 
-    document.getElementById("ae").style.color="white"; 
 
-    document.getElementById("atarS").style.display="block";
-    document.getElementById("atarS").style.color="white";
-    document.getElementById("virt").style.display="block";
-    document.getElementById("virt").style.color="white"; 
-    document.getElementById("superS").style.display="block";
-    document.getElementById("superS").style.color="white"; 
+
+
     
     //show game section debug
     document.getElementById("gameS").classList.add("hidden");
@@ -121,10 +115,9 @@ function clickedSomething(event){
     document.getElementById("contS").innerHTML ="CONTACT";
     document.getElementById("contS").href = "contact";
     document.getElementById("gameS").classList.remove("hidden");
-    document.getElementById("atarS").style.display="none";
-    document.getElementById("virt").style.display="none";
-    document.getElementById("superS").style.display="none";
-    document.getElementById("ae").style.display="none";
+
+
+
   }else if ((event.target.id)==="close") {
     document.getElementById("sub_nav").style.display="none";
     document.getElementById("back").style.display="none";
