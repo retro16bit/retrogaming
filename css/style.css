@@ -1,4 +1,4 @@
-/*needs to be updated*/
+/* updated*/
 body{
   display: block;
   padding-right: 30px;
@@ -187,13 +187,16 @@ position: absolute;
   margin: 0 auto;
   text-align: center;
 }
+.hide{
+  display: none;
+}
 #sub_nav_top{
   position: absolute;
   top: 50px;
   z-index:999;
 /*alignment  238.047img + 55.13+30about + 57.8+30songs +30margin stop here(+ 126.69+30 + 86.86+30)*/
   right: 200px;
-  height: 200px;
+  height: 100px;
   width: 250px;
   background-color:#202020;
 /*
@@ -218,9 +221,6 @@ position: absolute;
   vertical-align: bottom;
   color: #FF679D;
 
-}
-#sub_nav_top{
-  opacity: 0;
 }
 .next{
   display: flex;
@@ -249,6 +249,6 @@ position: absolute;
   width: 100%;
   padding-right: 45px;
   padding-left: 45px;
-  margin-top: 90px;
+  margin-top: 100px;
 }
 input{color: black;}
